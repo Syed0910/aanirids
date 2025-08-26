@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <div class="bg-primary text-white p-4 mb-4">
+            <div class="container">
+                <h1 class="display-6"><i class="fas fa-cog me-2"></i>System Settings</h1>
+                <p class="lead mb-0">Configure your system preferences</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <!-- Main Tabs Navigation -->
+            <ul class="nav nav-tabs mb-4" id="mainTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button">
+                        <i class="fas fa-sliders-h me-1"></i> General
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="software-tab" data-bs-toggle="tab" data-bs-target="#software" type="button">
+                        <i class="fas fa-laptop-code me-1"></i> Software
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="sms-tab" data-bs-toggle="tab" data-bs-target="#sms" type="button">
+                        <i class="fas fa-sms me-1"></i> SMS
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="email-tab" data-bs-toggle="tab" data-bs-target="#email" type="button">
+                        <i class="fas fa-envelope me-1"></i> Email
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment" type="button">
+                        <i class="fas fa-credit-card me-1"></i> Payment
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="subscriber-tab" data-bs-toggle="tab" data-bs-target="#subscriber" type="button">
+                        <i class="fas fa-users me-1"></i> Subscriber
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="user-tab" data-bs-toggle="tab" data-bs-target="#user" type="button">
+                        <i class="fas fa-user me-1"></i> User
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="captive-tab" data-bs-toggle="tab" data-bs-target="#captive" type="button">
+                        <i class="fas fa-wifi me-1"></i> Captive
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="modules-tab" data-bs-toggle="tab" data-bs-target="#modules" type="button">
+                        <i class="fas fa-cubes me-1"></i> Modules
+                    </button>
+                </li>
+            </ul>
+            
+            <!-- Tab Content -->
+            <div class="tab-content bg-white p-4 rounded-bottom shadow-sm" id="mainTabsContent">
+                <!-- General Tab -->
+                <div class="tab-pane fade show active" id="general" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-light">
+                                    <h5 class="mb-0">System Information</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">System Name</label>
+                                        <input type="text" class="form-control" value="My Business">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Timezone</label>
+                                        <select class="form-select">
+                                            <option>(UTC+00:00) London</option>
+                                            <option selected>(UTC+05:00) Karachi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-light">
+                                    <h5 class="mb-0">Preferences</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-check form-switch mb-3">
+                                        <input class="form-check-input" type="checkbox" checked>
+                                        <label class="form-check-label">Maintenance Mode</label>
+                                    </div>
+                                    <div class="form-check form-switch mb-3">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label">Auto Updates</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-3">
+                        <i class="fas fa-save me-1"></i> Save Settings
+                    </button>
+                </div>
+                
+                <!-- Payment Tab -->
+                <div class="tab-pane fade" id="payment" role="tabpanel">
+                    <h5 class="mb-4"><i class="fas fa-credit-card me-2"></i>Payment Settings</h5>
+                    
+                    <!-- Payment Method Tabs -->
+                    <ul class="nav nav-tabs mb-4" id="paymentTabs" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#bkash">Bkash</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#sslcommerz">SSLCommerz</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#razorpay">Razorpay</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#jazzcash">JazzCash</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#paystack">Paystack</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#easypaisa">EasyPaisa</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nextpay">NextPay</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#mpesa">M-Pesa</button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Payment Method Content -->
+                    <div class="tab-content p-3 border border-top-0 rounded-bottom">
+                        <!-- Bkash Content -->
+                        <div class="tab-pane fade show active" id="bkash">
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Status</label>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" checked>
+                                        <label class="form-check-label">Enabled</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Mode</label>
+                                    <div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="bkash_mode">
+                                            <label class="form-check-label">Live</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="bkash_mode" checked>
+                                            <label class="form-check-label">Sandbox</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">API Key</label>
+                                    <input type="text" class="form-control" value="bk_123456789">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">API Secret</label>
+                                    <input type="password" class="form-control" value="********">
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-save me-1"></i> Save
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- SSLCommerz Content -->
+                        <div class="tab-pane fade" id="sslcommerz">
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Store ID</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Store Password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-save me-1"></i> Save
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Other payment methods would go here -->
+                        <div class="tab-pane fade" id="razorpay">
+                            <p>Razorpay settings form would go here</p>
+                        </div>
+                        <div class="tab-pane fade" id="jazzcash">
+                            <p>JazzCash settings form would go here</p>
+                        </div>
+                        <div class="tab-pane fade" id="paystack">
+                            <p>Paystack settings form would go here</p>
+                        </div>
+                        <div class="tab-pane fade" id="easypaisa">
+                            <p>EasyPaisa settings form would go here</p>
+                        </div>
+                        <div class="tab-pane fade" id="nextpay">
+                            <p>NextPay settings form would go here</p>
+                        </div>
+                        <div class="tab-pane fade" id="mpesa">
+                            <p>M-Pesa settings form would go here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Subscriber Tab -->
+                <div class="tab-pane fade" id="subscriber" role="tabpanel">
+                    <h5 class="mb-4"><i class="fas fa-users me-2"></i>Subscriber Settings</h5>
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0">Subscription Plans</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Default Plan</label>
+                                    <select class="form-select">
+                                        <option>Basic</option>
+                                        <option selected>Premium</option>
+                                        <option>Business</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Trial Period (days)</label>
+                                    <input type="number" class="form-control" value="14">
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-save me-1"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Email Tab -->
+                <div class="tab-pane fade" id="email" role="tabpanel">
+                    <h5 class="mb-4"><i class="fas fa-envelope me-2"></i>Email Settings</h5>
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0">SMTP Configuration</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">SMTP Host</label>
+                                    <input type="text" class="form-control" value="smtp.example.com">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">SMTP Port</label>
+                                    <input type="number" class="form-control" value="587">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" class="form-control" value="noreply@example.com">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" value="********">
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-save me-1"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Placeholder for other tabs -->
+                <div class="tab-pane fade" id="software" role="tabpanel">
+                    <p>Software settings would appear here</p>
+                </div>
+                <div class="tab-pane fade" id="sms" role="tabpanel">
+                    <p>SMS settings would appear here</p>
+                </div>
+                <div class="tab-pane fade" id="user" role="tabpanel">
+                    <p>User settings would appear here</p>
+                </div>
+                <div class="tab-pane fade" id="captive" role="tabpanel">
+                    <p>Captive portal settings would appear here</p>
+                </div>
+                <div class="tab-pane fade" id="modules" role="tabpanel">
+                    <p>Modules settings would appear here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

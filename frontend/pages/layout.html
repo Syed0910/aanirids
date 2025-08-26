@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Aanirids Technologies Private Limited</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"/>        <!--end::Fonts-->
+
+<!-- Vendor Stylesheets (used for specific plugins like FullCalendar, Datatables) -->
+                    <link href="../public/css/fullcalendar.bundle.css" rel="stylesheet" type="text/css"/>
+                    <link href="../public/css/datatables.bundle.css" rel="stylesheet" type="text/css"/>
+
+                    <!-- Global Stylesheets Bundle (mandatory for all pages) -->
+                    <link href="../public/css/plugins.bundle.css" rel="stylesheet" type="text/css"/>
+                    <link href="../public/css/style.bundle.css" rel="stylesheet" type="text/css"/>
+
+                    <!-- Your Custom Overrides -->
+                    <link href="../styles/overrides.css" rel="stylesheet" type="text/css"/>
+                    <!--begin::Vendor Stylesheets(used for this page only)-->
+                        <link href="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css"/>
+                        <link href="../assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css"/>
+                        <!--end::Vendor Stylesheets-->
+
+                        <!--begin::Global Stylesheets Bundle (mandatory for all pages)-->
+                        <link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
+                        <link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css"/>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-papSmHg..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!--end::Global Stylesheets Bundle-->
+
+
+</head>
+<body>
+
+
+
+<!-- Offcanvas for sidebars -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="kt_aside_offcanvas" aria-labelledby="kt_aside_offcanvas_label">
+  <!--<div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="kt_aside_offcanvas_label">Menu</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>-->
+  <div class="offcanvas-body d-flex">
+    <!-- Primary Sidebar -->
+   <div class="aside-primary">
+    <div class="logo">
+        <a href="layout.html?page=index" class="load-page">
+            <img alt="Logo" src="../public/images/Wavesnett.png" class="h-50px"/>
+        </a>
+    </div>
+
+    <div class="nav-icon"
+         data-bs-toggle="tooltip" 
+         data-bs-trigger="hover" 
+         data-bs-placement="right" 
+         title="Menu">
+        <a href="layout.html?page=index" class="load-page">
+            <i class="bi bi-briefcase-fill fs-2x text-white"></i>
+        </a>
+    </div>                                   
+
+    <div class="nav-icon"
+         data-bs-toggle="tooltip" 
+         data-bs-trigger="hover" 
+         data-bs-placement="right" 
+         title="Settings">
+        <a href="layout.html?page=settings" class="load-page">
+            <i class="bi bi-gear-fill fs-2x text-white"></i>
+        </a>
+    </div>
+    
+    <div class="nav-icon"
+         data-bs-toggle="tooltip" 
+         data-bs-trigger="hover" 
+         data-bs-placement="right" 
+         title="Packages">
+        <a href="layout.html?page=my-packages/my-packages" class="load-page">
+            <i class="bi bi-box fs-2x text-white"></i>
+        </a>
+    </div>
+    
+   <div class="nav-icon" 
+         data-bs-toggle="tooltip" 
+         data-bs-trigger="hover" 
+         data-bs-placement="right" 
+         title="Vendor Notice">
+        <a href="layout.html?page=vendor-notices" class="load-page">
+            <i class="bi bi-bell-fill fs-2x text-white"></i>
+        </a>
+    </div>
+
+    <!-- Profile Button -->
+  <div class="dropup" style="margin-top: auto; padding-bottom: 20px;">
+    <!-- Profile Button -->
+  <button class="btn p-0 d-block" id="profileMenuBtn" data-bs-toggle="dropdown" aria-expanded="false" 
+        style="width:48px; height:48px; border-radius:12px; overflow:hidden;">
+    <img src="../public/images/anonymous-profile.png" alt="Profile" 
+         style="width:100%; height:100%; object-fit:cover;">
+</button>
+
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu dropdown-menu-end p-0 shadow-lg border-0" aria-labelledby="profileMenuBtn" 
+         style="min-width: 280px; border-radius: 16px; overflow: hidden;">
+        
+        <!-- Profile Header -->
+        <div class="p-3 border-bottom bg-light">
+            <div class="d-flex align-items-center">
+                <img src="../public/images/anonymous-profile.png" alt="Profile" 
+                     class="rounded-circle me-3" style="width: 48px; height: 48px; object-fit: cover;">
+                <div>
+                    <strong class="d-block">sksadar</strong> 
+                    <span class="badge bg-primary">Admin</span><br>
+                    <small class="text-muted">sksadar@wavesnett.com</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="p-2">
+            <a class="dropdown-item rounded py-2 px-3 fw-medium load-page" href="layout.html?page=profile">My Profile</a>
+            <a class="dropdown-item rounded py-2 px-3 fw-medium load-page" href="layout.html?page=change-password">Change Password</a>
+
+            <!-- Language Submenu -->
+            <div class="dropdown-submenu position-relative">
+                <a class="dropdown-item rounded d-flex align-items-center justify-content-between py-2 px-3 fw-medium" href="#">
+                    <span>Language</span>
+                    <span>English 
+                        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" style="width: 18px; margin-left: 5px;">
+                    </span>
+                </a>
+                <div class="dropdown-menu shadow border-0 p-2">
+                    <a class="dropdown-item d-flex align-items-center py-2" href="#" data-lang="en">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" width="20" class="me-2">English
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center py-2" href="#" data-lang="es">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" width="20" class="me-2">Spanish
+                    </a>
+                </div>
+            </div>
+
+
+
+
+            <a class="dropdown-item rounded py-2 px-3 fw-medium load-page" href="layout.html?page=sync-permissions">Sync Permissions</a>
+        </div>
+
+        <!-- Logout -->
+        <div class="border-top p-2">
+            <a class="dropdown-item text-danger rounded py-2 px-3 fw-medium" href="layout.html?page=logout">Log Out</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+    <!-- Secondary Sidebar -->
+    <div class="aside-secondary">
+        <!-- Search Section -->
+        <div class="search-container">
+            <div class="search-box">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search...">
+            </div>
+        </div>
+
+        <!-- Menu Section -->
+        <div class="menu-container">
+            <div class="menu-title">
+                <h5>MENU</h5>
+            </div>
+
+            <div class="menu-item">
+                <a href="layout.html?page=index" class="menu-link active load-page">
+                    <div class="menu-icon-container">
+                        <i class="bi bi-house-door-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Home</span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="layout.html?page=profile" class="menu-link load-page">
+                    <div class="menu-icon-container">
+                        <i class="bi bi-person-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">My Profile</span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="layout.html?page=my-packages/my-packages" class="menu-link load-page" >
+                    <div class="menu-icon-container">
+                        <i class="bi bi-box2-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">My Packages</span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-link menu-parent" data-target="users-submenu" >
+                    <div class="menu-icon-container">
+                        <i class="bi bi-people-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Users</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="submenu" id="users-submenu">
+                    <a href="layout.html?page=users/roles" class="load-page">Roles</a>
+                    <a href="layout.html?page=users/users" class="load-page">Users</a>
+                    <a href="layout.html?page=users/staffs" class="load-page">Staffs</a>
+                    <a href="layout.html?page=users/resellers" class="load-page">Resellers</a>
+                    <a href="layout.html?page=users/subreseller" class="load-page">Subresellers</a>
+                    <a href="layout.html?page=users/retailers" class="load-page">Retailers</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-link menu-parent" data-target="package-submenu" >
+                    <div class="menu-icon-container">
+                        <i class="bi bi-box-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Package</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="submenu" id="package-submenu">
+                    <a href="layout.html?page=package/policy" class="load-page">Policy</a>
+                    <a href="layout.html?page=package/packages" class="load-page">Packages</a>
+                    <a href="layout.html?page=package/allocation" class="load-page">Allocation</a>
+                    <a href="layout.html?page=package/tax" class="load-page">Tax/Extra Fee</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-link menu-parent" data-target="subscribers-submenu" >
+                    <div class="menu-icon-container">
+                        <i class="bi bi-person-check-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Subscribers</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="submenu" id="subscribers-submenu">
+                    <a href="layout.html?page=subscribers/all-subscribers" class="load-page">All</a>
+                    <a href="layout.html?page=subscribers/online" class="load-page">Online</a>
+                    <a href="layout.html?page=subscribers/offline" class="load-page">Offline</a>
+                    <a href="layout.html?page=subscribers/expired" class="load-page">Expired</a>
+                    <a href="layout.html?page=subscribers/expired-online" class="load-page">Expired Online</a>
+                    <a href="layout.html?page=subscribers/expiring-1-day" class="load-page">Expiring 1 Day</a>
+                    <a href="layout.html?page=subscribers/expiring-3-days" class="load-page">Expiring 3 Days</a>
+                    <a href="layout.html?page=subscribers/expiring-1-week" class="load-page">Expiring 1 Week</a>
+                    <a href="layout.html?page=subscribers/expiring-2-weeks" class="load-page">Expiring 2 Weeks</a>
+                    <a href="layout.html?page=subscribers/expiring-4-weeks" class="load-page">Expiring 4 Weeks</a>
+                    <a href="layout.html?page=subscribers/grace-period-on" class="load-page">Grace Period On</a>
+                    <a href="layout.html?page=subscribers/recent-auto-renew" class="load-page">Recent Auto Renew</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-link menu-parent" data-target="accounting-submenu">
+                    <div class="menu-icon-container">
+                        <i class="bi bi-calculator-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Accounting</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="submenu" id="accounting-submenu">
+                    <a href="layout.html?page=accounting/sales-invoices" class="load-page">Sales/Invoices</a>
+                    <a href="layout.html?page=accounting/ledger-reports" class="load-page">Ledger Reports</a>
+                    <a href="layout.html?page=accounting/ledgers-reports-2" class="load-page">Ledgers Reports 2</a>
+                    <a href="layout.html?page=accounting/cashflow-reports" class="load-page">Cashflow Reports</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-link menu-parent" data-target="network-submenu">
+                    <div class="menu-icon-container">
+                        <i class="bi bi-diagram-3-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Network</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="submenu" id="network-submenu">
+                    <a href="layout.html?page=network/nas" class="load-page">NAS</a>
+                    <a href="layout.html?page=network/nas-group" class="load-page">NAS Group</a>
+                    <a href="layout.html?page=network/ip-pool" class="load-page">IP Pool</a>
+                    <a href="layout.html?page=network/graph" class="load-page">Graph</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-link menu-parent" data-target="area-submenu">
+                    <div class="menu-icon-container">
+                        <i class="bi bi-house-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Area</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="submenu" id="area-submenu">
+                    <a href="layout.html?page=area/areas" class="load-page">Area</a>
+                    <a href="layout.html?page=area/areagroup" class="load-page">Area Group</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-link menu-parent" data-target="email-submenu">
+                    <div class="menu-icon-container">
+                        <i class="bi bi-envelope-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Email</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="submenu" id="email-submenu">
+                    <a href="layout.html?page=email/email-templates" class="load-page">Email Templates</a>
+                    <a href="layout.html?page=email/email-delivery" class="load-page">Email Delivery Reports</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-link menu-parent" data-target="sms-submenu">
+                    <div class="menu-icon-container">
+                        <i class="bi bi-chat-dots-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">SMS</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="submenu" id="sms-submenu">
+                    <a href="layout.html?page=sms/SMS-Templates" class="load-page">SMS Templates</a>
+                    <a href="layout.html?page=sms/SMS-delivery" class="load-page">SMS Delivery Reports</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-link menu-parent" data-target="logs-submenu">
+                    <div class="menu-icon-container">
+                        <i class="bi bi-journal-text menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Logs</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="submenu" id="logs-submenu">
+                   <a href="layout.html?page=logs/activity-logs" class="load-page">Activity Logs</a>
+                    <a href="layout.html?page=logs/login-logs" class="load-page">Login Logs</a>
+                    <a href="layout.html?page=logs/session-logs" class="load-page">Session Logs</a>
+                    <a href="layout.html?page=logs/coa-requests" class="load-page">CoA Requests</a>
+                    <a href="layout.html?page=logs/failed-imports" class="load-page">Failed Imports</a>
+                    <a href="layout.html?page=logs/failed-activations" class="load-page">Failed Activations</a>
+                    <a href="layout.html?page=logs/pgw-transactions" class="load-page">PGW Transactions</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <a href="layout.html?page=notes" class="menu-link load-page">
+                    <div class="menu-icon-container">
+                     <i class="bi bi-file-earmark-text-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Notes</span>
+                </a>
+            </div>
+
+             <div class="menu-item">
+                <a href="layout.html?page=reports" class="menu-link load-page">
+                    <div class="menu-icon-container">
+                   <i class="bi bi-bar-chart-fill menu-icon fs-2x"></i> 
+                    </div>
+                    <span class="menu-text">Reports</span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="layout.html?page=documents" class="menu-link load-page">
+                    <div class="menu-icon-container">
+                         <i class="bi bi-file-earmark-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Documents</span>
+                </a>
+            </div>
+        
+             <div class="menu-item">
+                <a href="layout.html?page=settings" class="menu-link load-page">
+                    <div class="menu-icon-container">
+                        <i class="bi bi-gear-fill menu-icon fs-2x"></i>
+                    </div>
+                    <span class="menu-text">Settings</span>
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toggle button for offcanvas -->
+<button type="button" class="btn btn-icon d-lg-none" id="menu-toggle" data-bs-toggle="offcanvas" data-bs-target="#kt_aside_offcanvas" aria-controls="kt_aside_offcanvas">
+  <i class="bi bi-list fs-2x"></i>
+</button>
+
+
+<!-- Main Content -->
+<div class="content">
+    <div id="main-content">
+       <!-- <div class="content-header">
+            <h1>Dashboard</h1>
+            <p>Welcome to your dashboard. Here you can manage all aspects of your system.</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 0 20px rgba(76, 87, 125, 0.02);">
+                    <h3 style="margin: 0 0 15px 0; color: #181c32;">Welcome to Metronic Dashboard</h3>
+                    <p style="color: #7e8299; margin: 0;">This is your main content area. You can add any content here. The sidebar layout will remain consistent across all pages.</p>
+                </div>
+            </div>
+        </div>-->
+    </div>
+</div>
+
+
+<!-- Bootstrap 5 JS -->
+<!-- Bootstrap 5 Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- jQuery (only if you actually use it in custom.js, otherwise remove) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Custom JS -->
+<script src="../scripts/custom.js"></script>
+
+<!-- Metronic Global Bundles -->
+<script src="../assets/plugins/global/plugins.bundle.js"></script>
+<script src="../assets/js/scripts.bundle.js"></script>
+
+<!-- Vendors (page-specific) -->
+<script src="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+<script src="../assets/plugins/custom/datatables/datatables.bundle.js"></script>
+
+<!-- amCharts (keep only once) -->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+
+<!-- Your additional custom scripts -->
+<script src="../scripts/widgets.js"></script>
+<script src="../scripts/chat.js"></script>
+<script src="../scripts/modals/upgrade-plan.js"></script>
+<script src="../scripts/modals/create-app.js"></script>
+<script src="../scripts/modals/users-search.js"></script>
+<script src="../assets/js/custom.js"></script>
+
+
+<!--end::Custom Javascript-->
+
+                                <!--end::Custom Javascript-->
+<!--begin::Modal - Sync Permission-->
+
+<!--end::Modal-->
+
+<!--begin::Trigger Button Example-->
+
+<!--end::Trigger-->
+</body>
+</html>

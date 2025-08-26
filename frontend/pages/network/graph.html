@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<!--
+                Author: Keenthemes
+                Product Name: MetronicProduct Version: 8.3.1
+                Purchase: https://1.envato.market/EA4JP
+                Website: http://www.keenthemes.com
+                Contact: support@keenthemes.com
+                Follow: www.twitter.com/keenthemes
+                Dribbble: www.dribbble.com/keenthemes
+                Like: www.facebook.com/keenthemes
+                License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
+                -->
+<html lang="en">
+<!--begin::Head-->
+
+<!-- Mirrored from preview.keenthemes.com/metronic8/demo7/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Jul 2025 17:08:32 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <title>Metronic - The World's #1 Selling Tailwind CSS & Bootstrap Admin Template by KeenThemes</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="
+                            The most advanced Tailwind CSS & Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo,
+                            Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions.
+                            Grab your copy now and get life-time updates for free.
+                        " />
+    <meta name="keywords" content="
+                            tailwind, tailwindcss, metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js,
+                            Node.js, Flask, Symfony & Laravel starter kits, admin themes, web design, figma, web development, free templates,
+                            free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button,
+                            bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon
+                        " />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title"
+        content="Metronic - The World's #1 Selling Tailwind CSS & Bootstrap Admin Template by KeenThemes" />
+    <meta property="og:url" content="https://keenthemes.com/metronic" />
+    <meta property="og:site_name" content="Metronic by Keenthemes" />
+    <link rel="canonical" href="index.html" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+
+    <!--begin::Fonts(mandatory for all pages)-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" /> <!--end::Fonts-->
+
+    <!--begin::Vendor Stylesheets(used for this page only)-->
+    <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Vendor Stylesheets-->
+
+
+    <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/icons/ki-duotone/style.css" rel="stylesheet" type="text/css" />
+
+    <!--end::Global Stylesheets Bundle-->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-52YZ3XGZJ6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-52YZ3XGZJ6');
+    </script>
+    <script>
+        // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking)
+        if (window.top != window.self) {
+            window.top.location.replace(window.self.location.href);
+        }
+    </script>
+</head>
+<!--end::Head-->
+
+<!--begin::Body-->
+
+<body id="kt_body" style="background-image: url()"
+    class="header-fixed header-tablet-and-mobile-fixed aside-fixed aside-secondary-enabled">
+    <!--begin::Theme mode setup on page load-->
+    <script>
+        var defaultThemeMode = "light";
+        var themeMode;
+
+        if (document.documentElement) {
+            if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
+                themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
+            } else {
+                if (localStorage.getItem("data-bs-theme") !== null) {
+                    themeMode = localStorage.getItem("data-bs-theme");
+                } else {
+                    themeMode = defaultThemeMode;
+                }
+            }
+
+            if (themeMode === "system") {
+                themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            }
+
+            document.documentElement.setAttribute("data-bs-theme", themeMode);
+        }            
+    </script>
+    <!--end::Theme mode setup on page load-->
+    
+    <!--begin::Main-->
+    <!--begin::Root-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Page-->
+        <div class="d-flex flex-row flex-column-fluid">
+            <!--begin::Aside-->
+            <div id="kt_aside" class="aside aside-extended " data-kt-drawer="true" data-kt-drawer-name="aside"
+                data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true"
+                data-kt-drawer-width="auto" data-kt-drawer-direction="start"
+                data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+
+                <!--begin::Primary-->
+
+                <!--end::Primary-->
+                <!--end::Primary-->
+
+                <!--begin::Secondary-->
+
+                <!--end::Secondary-->
+
+                <!--begin::Aside Toggle-->
+                <button id="kt_aside_toggle"
+                    class="aside-toggle btn btn-sm btn-icon bg-body btn-color-gray-700 btn-active-primary position-absolute translate-middle start-100 end-0 bottom-0 shadow-sm d-none d-lg-flex mb-5 "
+                    data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
+                    data-kt-toggle-name="aside-minimize">
+
+                    <i class="ki-duotone ki-arrow-left fs-2 rotate-180"><span class="path1"></span><span
+                            class="path2"></span></i> </button>
+                <!--end::Aside Toggle-->
+            </div>
+            <!--end::Aside-->
+            <!--begin::Wrapper-->
+            <div class="wrapper d-flex flex-column flex-row-fluid ms-lg-20" id="kt_wrapper">
+                <!--begin::Header-->
+                <div id="kt_header" class="header" data-kt-sticky="true" data-kt-sticky-name="header"
+                    data-kt-sticky-offset="{default: '200px', lg: '300px'}" data-kt-sticky-enabled="true"
+                    style="animation-duration: 0.3s; top: 0px;">
+
+                    <!--begin::Container-->
+                    <div class="container-xxl  d-flex align-items-center justify-content-between"
+                        id="kt_header_container">
+
+                        <!--begin::Page title-->
+                        <div class="page-title d-flex flex-column align-items-start justify-content-center flex-wrap mt-n5 mt-lg-0 me-lg-2 pb-2 pb-lg-0"
+                            data-kt-swapper="true" data-kt-swapper-mode="prepend"
+                            data-kt-swapper-parent="{default: '#kt_content_container', lg: '#kt_header_container'}">
+
+                            <!--begin::Heading-->
+                            <h1 class="text-gray-900 fw-bold my-0 fs-2">
+                                NAS Group </h1>
+                            <!--end::Heading-->
+
+                            <!--begin::Breadcrumb-->
+                            <ul class="breadcrumb fw-semibold fs-base my-1">
+                                <li class="breadcrumb-item text-muted">
+                                    <a href="index.html" class="text-muted text-hover-primary">
+                                        Home - All NAS Group </a>
+                                </li>
+
+
+
+                                <!--<li class="breadcrumb-item text-gray-900">
+                        AaniRids Technologies Private Limited                   </li>-->
+
+                            </ul>
+                            <!--end::Breadcrumb-->
+                        </div>
+                        <!--end::Page title--->
+
+                        <!--begin::Wrapper-->
+                        <div class="d-flex d-lg-none align-items-center ms-n4 me-2">
+                            <!--begin::Aside mobile toggle-->
+                            <div class="btn btn-icon btn-active-icon-primary" id="kt_aside_mobile_toggle">
+                                <i class="ki-duotone ki-abstract-14 fs-1"><span class="path1"></span><span
+                                        class="path2"></span></i>
+                            </div>
+                            <!--end::Aside mobile toggle-->
+
+                            <!--begin::Logo-->
+                            <a href="../../index.html" class="d-flex align-items-center">
+                                <img alt="Logo" src="../../assets/media/logos/logo.svg.jpg" class="h-30px">
+                            </a>
+                            <!--end::Logo-->
+                        </div>
+                        <!--end::Wrapper-->
+
+                        <!--begin::Toolbar wrapper-->
+                        <div class="d-flex flex-shrink-0">
+                            <!--begin::Invite user-->
+                            <div class="d-flex ms-3">
+                                <a href="#" class="btn btn-flex flex-center btn-light btn-color-gray-600 btn-active-primary w-40px w-md-auto h-40px px-0 px-md-6"  data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends" >
+                                    <i class="bi bi-person fs-4 me-2 text-black"></i>           <span class="d-none d-md-inline">Admin</span> 
+                                </a>
+                            </div>
+                            <!--end::Invite user--> 
+
+                            <!--begin::Create app-->
+                            <div class="d-flex ms-3">
+                                <a href="#" class="btn btn-flex btn-light flex-center btn-color-gray-600 btn-active-primary w-40px w-md-auto h-40px px-0 px-md-6"  data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">
+                                    <i class="bi bi-diagram-3 me-2 text-black"><span class="path1"></span><span class="path2"></span></i>            <span class="d-none d-md-inline">Aanirids Technologies</span> 
+                                </a>
+                            </div>
+
+                            <div class="d-flex ms-3">
+                                <a href="#" class="btn btn-flex btn-light flex-center btn-color-gray-600 btn-active-primary w-40px w-md-auto h-40px px-0 px-md-6"  data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">
+                                    <i class="fas fa-code-branch fs-7"></i>             <span class="d-none d-md-inline">WavesNett Technologies</span> 
+                                </a>
+                            </div>
+                            <!--end::Create app-->    
+
+                            <!--begin::Theme mode-->
+<div class="d-flex align-items-center ms-3">
+    <!-- Menu toggle -->
+    <div class="dropdown">
+        <a href="#" class="btn btn-icon flex-center bg-body btn-color-gray-600 btn-active-color-primary h-40px dropdown-toggle"
+           data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person fs-4"></i>
+        </a>
+
+        <!-- Menu -->
+        <div class="dropdown-menu dropdown-menu-end m-2 p-2">
+            <!-- Menu item -->
+            <div class="px-3 py-2 border-bottom">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-person fs-4 me-2"></i>
+                    <div>
+                        <div class="fw-semibold">Sk Sadar</div>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional menu items -->
+            <a href="layout.html?page=settings" class="dropdown-item">
+                <i class="bi bi-gear me-2"></i> Settings
+            </a>
+            <a href="layout.html?page=change-password" class="dropdown-item">
+                <i class="bi bi-key me-2"></i> Change Password
+            </a>
+            <a href="layout.html?page=logout" class="dropdown-item">
+                <i class="bi bi-box-arrow-right me-2"></i> Logout
+            </a>
+            
+            <!-- Language option (fixed to look like other items) -->
+            <a href="#" class="dropdown-item d-flex align-items-center justify-content-between gap-2">
+                <span class="d-flex align-items-center">
+                    <i class="bi bi-translate me-2"></i>
+                    Language
+                </span>
+                <span class="d-flex align-items-center">
+                    <img src="https://flagcdn.com/us.svg" alt="US Flag" width="20" height="15" class="me-2">
+                    English
+                </span>
+            </a>
+
+            <a href="#" class="dropdown-item">
+                <i class="bi bi-shield-check me-2"></i> Sync-permissions
+            </a>
+        </div>
+    </div>
+</div>
+                            <!--end::Theme mode-->
+            <!--begin::Chat-->
+
+            <!--end::Chat--> 
+        </div>
+                        <!--end::Toolbar wrapper-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+
+                <!--begin::Content-->
+				<div class="content d-flex flex-column flex-column-fluid mx-0" id="kt_content">
+					<!--begin::Container-->
+<div class="container-xxl " id="kt_content_container">
+   
+<!--begin::Navbar-->
+<!--end::Navbar-->
+<!--begin::Toolbar-->
+<div class="card mb-6">
+    <!--begin::Card header-->
+<!-- Graph Filter Section - Bootstrap Only -->
+<div class="card card-flush">
+    <div class="card-body">
+        <h3 class="card-title mb-7">Graph</h3>
+        
+        <div class="row g-6 mb-7">
+            <!-- NAS Dropdown -->
+            <div class="col-lg-4 col-md-4">
+                <label class="form-label fs-7 fw-semibold text-gray-900 mb-3">NAS</label>
+                <div class="dropdown w-100">
+                    <button class="btn btn-light-primary w-100 text-start d-flex justify-content-between align-items-center" 
+                            type="button" id="nasDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="text-muted">Search Nas Here...</span>
+                        <i class="ki-outline ki-down fs-4 text-muted"></i>
+                    </button>
+                    <div class="dropdown-menu w-100 p-0" aria-labelledby="nasDropdown">
+                        <div class="p-3 border-bottom">
+                            <input type="text" class="form-control form-control-sm" placeholder="Search..." 
+                                   oninput="searchNas(this.value)">
+                        </div>
+                        <div class="p-3 text-muted fs-7" id="search-status">Searching...</div>
+                        <a class="dropdown-item text-primary fw-semibold" href="#" onclick="selectNas('#1 - NAS-1', this)">
+                            #1 - NAS-1
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interface Type Dropdown -->
+            <div class="col-lg-4 col-md-4">
+                <label class="form-label fs-7 fw-semibold text-gray-900 mb-3">Interface Type</label>
+                <div class="dropdown w-100">
+                    <button class="btn btn-light-primary w-100 text-start d-flex justify-content-between align-items-center" 
+                            type="button" id="interfaceTypeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="text-muted">Select A Type</span>
+                        <i class="ki-outline ki-down fs-4 text-muted"></i>
+                    </button>
+                    <div class="dropdown-menu w-100" aria-labelledby="interfaceTypeDropdown">
+                        <a class="dropdown-item active" href="#" onclick="selectInterfaceType('Select A Type', this)">
+                            Select A Type
+                        </a>
+                        <a class="dropdown-item" href="#" onclick="selectInterfaceType('Bridge', this)">Bridge</a>
+                        <a class="dropdown-item" href="#" onclick="selectInterfaceType('Ether', this)">Ether</a>
+                        <a class="dropdown-item" href="#" onclick="selectInterfaceType('PPPoE', this)">PPPoE</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interface Dropdown -->
+            <div class="col-lg-4 col-md-4">
+                <label class="form-label fs-7 fw-semibold text-gray-900 mb-3">Interface</label>
+                <div class="dropdown w-100">
+                    <button class="btn btn-light-primary w-100 text-start d-flex justify-content-between align-items-center" 
+                            type="button" id="interfaceDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="text-muted">Select An Interface</span>
+                        <i class="ki-outline ki-down fs-4 text-muted"></i>
+                    </button>
+                    <div class="dropdown-menu w-100" aria-labelledby="interfaceDropdown">
+                        <a class="dropdown-item active" href="#" onclick="selectInterface('Select An Interface', this)">
+                            Select An Interface
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-primary" onclick="submitForm()">
+                Submit
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-10 d-flex justify-content-center">
+        <div class="col-lg-11">
+            <div class="card card-xl-stretch mb-5 mb-xl-8">
+                <div class="card-header border-0 py-4">
+                    <div class="card-title">
+                        <h3 class="fw-bolder">NAS Interface Live Graph<span class="live_graph_text"></span></h3>
+                    </div>
+                </div>
+                <div class="card-body p-0" style="position: relative;">
+                    <div id="global_networking_graph" class="card-rounded-bottom" style="height: 225px; min-height: 240px;"><div id="apexcharts11kl5b6i" class="apexcharts-canvas apexcharts11kl5b6i apexcharts-theme-light" style="width: 1300px; height: 225px;"><svg id="SvgjsSvg1110" width="1300" height="225" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><g id="SvgjsG1112" class="apexcharts-inner apexcharts-graphical" transform="translate(46, 30)"><defs id="SvgjsDefs1111"><clipPath id="gridRectMask11kl5b6i"><rect id="SvgjsRect1118" width="1251" height="127.988" x="-3.5" y="-1.5" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath><clipPath id="forecastMask11kl5b6i"></clipPath><clipPath id="nonForecastMask11kl5b6i"></clipPath><clipPath id="gridRectMarkerMask11kl5b6i"><rect id="SvgjsRect1119" width="1248" height="128.988" x="-2" y="-2" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath></defs><g id="SvgjsG1124" class="apexcharts-xaxis" transform="translate(0, 0)"><g id="SvgjsG1125" class="apexcharts-xaxis-texts-g" transform="translate(0, -4)"></g><g id="SvgjsG1126" class="apexcharts-xaxis-title"><text id="SvgjsText1127" font-family="inherit" x="622" y="186" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="900" fill="#373d3f" class="apexcharts-text apexcharts-xaxis-title-text " style="font-family: inherit;">Timeline (30 Sec)</text></g></g><g id="SvgjsG1144" class="apexcharts-grid"><g id="SvgjsG1145" class="apexcharts-gridlines-horizontal"><line id="SvgjsLine1147" x1="0" y1="0" x2="1244" y2="0" stroke="#eff2f5" stroke-dasharray="4" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1148" x1="0" y1="24.9976" x2="1244" y2="24.9976" stroke="#eff2f5" stroke-dasharray="4" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1149" x1="0" y1="49.9952" x2="1244" y2="49.9952" stroke="#eff2f5" stroke-dasharray="4" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1150" x1="0" y1="74.99279999999999" x2="1244" y2="74.99279999999999" stroke="#eff2f5" stroke-dasharray="4" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1151" x1="0" y1="99.9904" x2="1244" y2="99.9904" stroke="#eff2f5" stroke-dasharray="4" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1152" x1="0" y1="124.988" x2="1244" y2="124.988" stroke="#eff2f5" stroke-dasharray="4" stroke-linecap="butt" class="apexcharts-gridline"></line></g><g id="SvgjsG1146" class="apexcharts-gridlines-vertical"></g><line id="SvgjsLine1154" x1="0" y1="124.988" x2="1244" y2="124.988" stroke="transparent" stroke-dasharray="0" stroke-linecap="butt"></line><line id="SvgjsLine1153" x1="0" y1="1" x2="0" y2="124.988" stroke="transparent" stroke-dasharray="0" stroke-linecap="butt"></line></g><g id="SvgjsG1120" class="apexcharts-area-series apexcharts-plot-series"><g id="SvgjsG1121" class="apexcharts-series" seriesName="MB" data:longestSeries="true" rel="1" data:realIndex="0"><g id="SvgjsG1122" class="apexcharts-series-markers-wrap" data:realIndex="0"></g></g><g id="SvgjsG1123" class="apexcharts-datalabels" data:realIndex="0"></g></g><line id="SvgjsLine1156" x1="0" y1="0" x2="0" y2="124.988" stroke="#7239ea" stroke-dasharray="3" stroke-linecap="butt" class="apexcharts-xcrosshairs" x="0" y="0" width="1" height="124.988" fill="#b1b9c4" filter="none" fill-opacity="0.9" stroke-width="1"></line><line id="SvgjsLine1157" x1="0" y1="0" x2="1244" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" stroke-linecap="butt" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine1158" x1="0" y1="0" x2="1244" y2="0" stroke-dasharray="0" stroke-width="0" stroke-linecap="butt" class="apexcharts-ycrosshairs-hidden"></line><g id="SvgjsG1159" class="apexcharts-yaxis-annotations"></g><g id="SvgjsG1160" class="apexcharts-xaxis-annotations"></g><g id="SvgjsG1161" class="apexcharts-point-annotations"></g></g><g id="SvgjsG1128" class="apexcharts-yaxis" rel="0" transform="translate(16, 0)"><g id="SvgjsG1129" class="apexcharts-yaxis-texts-g"><text id="SvgjsText1130" font-family="inherit" x="20" y="31.5" text-anchor="end" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#a1a5b7" class="apexcharts-text apexcharts-yaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1131">5</tspan><title>5</title></text><text id="SvgjsText1132" font-family="inherit" x="20" y="56.4976" text-anchor="end" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#a1a5b7" class="apexcharts-text apexcharts-yaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1133">4</tspan><title>4</title></text><text id="SvgjsText1134" font-family="inherit" x="20" y="81.4952" text-anchor="end" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#a1a5b7" class="apexcharts-text apexcharts-yaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1135">3</tspan><title>3</title></text><text id="SvgjsText1136" font-family="inherit" x="20" y="106.49279999999999" text-anchor="end" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#a1a5b7" class="apexcharts-text apexcharts-yaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1137">2</tspan><title>2</title></text><text id="SvgjsText1138" font-family="inherit" x="20" y="131.4904" text-anchor="end" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#a1a5b7" class="apexcharts-text apexcharts-yaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1139">1</tspan><title>1</title></text><text id="SvgjsText1140" font-family="inherit" x="20" y="156.488" text-anchor="end" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#a1a5b7" class="apexcharts-text apexcharts-yaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1141">0</tspan><title>0</title></text></g><g id="SvgjsG1142" class="apexcharts-yaxis-title"><text id="SvgjsText1143" font-family="inherit" x="40.453125" y="92.494" text-anchor="end" dominant-baseline="auto" font-size="11px" font-weight="900" fill="#373d3f" class="apexcharts-text apexcharts-yaxis-title-text " style="font-family: inherit;" transform="rotate(-90 -3.015625 88.49400329589844)">BW Usage (MB)</text></g></g><rect id="SvgjsRect1155" width="0" height="0" x="0" y="0" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fefefe"></rect><g id="SvgjsG1113" class="apexcharts-annotations"></g></svg><div class="apexcharts-legend" style="max-height: 112.5px;"></div></div></div>
+                <div class="resize-triggers"><div class="expand-trigger"><div style="width: 1301px; height: 241px;"></div></div><div class="contract-trigger"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+<!-- JavaScript Functions -->
+<script>
+function selectNas(value, element) {
+    const button = element.closest('.dropdown').querySelector('button span');
+    button.textContent = value;
+    button.classList.remove('text-muted');
+    
+    // Update active state
+    element.closest('.dropdown-menu').querySelectorAll('.dropdown-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    element.classList.add('active');
+    
+    // Close dropdown
+    const dropdown = bootstrap.Dropdown.getInstance(element.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]'));
+    if (dropdown) dropdown.hide();
+    
+    event.preventDefault();
+}
+
+function selectInterfaceType(value, element) {
+    const button = element.closest('.dropdown').querySelector('button span');
+    button.textContent = value;
+    if (value !== 'Select A Type') {
+        button.classList.remove('text-muted');
+    } else {
+        button.classList.add('text-muted');
+    }
+    
+    // Update active state
+    element.closest('.dropdown-menu').querySelectorAll('.dropdown-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    element.classList.add('active');
+    
+    // Close dropdown
+    const dropdown = bootstrap.Dropdown.getInstance(element.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]'));
+    if (dropdown) dropdown.hide();
+    
+    event.preventDefault();
+}
+
+function selectInterface(value, element) {
+    const button = element.closest('.dropdown').querySelector('button span');
+    button.textContent = value;
+    if (value !== 'Select An Interface') {
+        button.classList.remove('text-muted');
+    } else {
+        button.classList.add('text-muted');
+    }
+    
+    // Update active state
+    element.closest('.dropdown-menu').querySelectorAll('.dropdown-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    element.classList.add('active');
+    
+    // Close dropdown
+    const dropdown = bootstrap.Dropdown.getInstance(element.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]'));
+    if (dropdown) dropdown.hide();
+    
+    event.preventDefault();
+}
+
+function searchNas(query) {
+    const searchStatus = document.getElementById('search-status');
+    
+    if (query.trim() === '') {
+        searchStatus.textContent = 'Searching...';
+        return;
+    }
+    
+    // Simulate search
+    setTimeout(() => {
+        searchStatus.textContent = `Found results for "${query}"`;
+    }, 300);
+}
+
+function submitForm() {
+    // Get selected values
+    const nasValue = document.querySelector('#nasDropdown span').textContent;
+    const typeValue = document.querySelector('#interfaceTypeDropdown span').textContent;
+    const interfaceValue = document.querySelector('#interfaceDropdown span').textContent;
+    
+    console.log('Form submitted with values:', {
+        nas: nasValue,
+        interfaceType: typeValue,
+        interface: interfaceValue
+    });
+    
+    alert('Form submitted! Check console for values.');
+}
+</script>
+    <!--end::Card header-->
+    
+    <!--begin::Card body-->
+
+<!--end::Toolbar-->
+
+<!--begin::Row-->
+
+<!--end::Row-->
+
+
+<!--begin::Modals-->
+<!--begin::Modal - Offer A Deal-->
+<div class="modal fade" id="kt_modal_offer_a_deal" tabindex="-1" aria-hidden="true">
+    <!--begin::Modal dialog-->
+    <div class="modal-dialog modal-dialog-centered mw-1000px">
+        <!--begin::Modal content-->
+        <div class="modal-content">
+            <!--begin::Modal header-->
+            <div class="modal-header py-7 d-flex justify-content-between">
+                <!--begin::Modal title-->
+                <h2>Offer a Deal</h2>
+                <!--end::Modal title-->
+
+                <!--begin::Close-->
+                <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                    <i class="ki-duotone ki-cross fs-1"><span class="path1"></span><span class="path2"></span></i>                </div>
+                <!--end::Close-->
+            </div>
+            <!--begin::Modal header-->
+
+            <!--begin::Modal body-->
+            <div class="modal-body scroll-y m-5">
+                <!--begin::Stepper-->
+                <div class="stepper stepper-links d-flex flex-column" id="kt_modal_offer_a_deal_stepper">
+                    <!--begin::Nav-->
+                    <div class="stepper-nav justify-content-center py-2">
+                        <!--begin::Step 1-->
+                        <div class="stepper-item me-5 me-md-15 current" data-kt-stepper-element="nav">
+                            <h3 class="stepper-title">
+                                Deal Type
+                            </h3>
+                        </div>
+                        <!--end::Step 1-->
+
+                        <!--begin::Step 2-->
+                        <div class="stepper-item me-5 me-md-15" data-kt-stepper-element="nav">
+                            <h3 class="stepper-title">
+                                Deal Details
+                            </h3>
+                        </div>
+                        <!--end::Step 2-->
+
+                        <!--begin::Step 3-->
+                        <div class="stepper-item me-5 me-md-15" data-kt-stepper-element="nav">
+                            <h3 class="stepper-title">
+                                Finance Settings
+                            </h3>
+                        </div>
+                        <!--end::Step 3-->
+
+                        <!--begin::Step 4-->
+                        <div class="stepper-item" data-kt-stepper-element="nav">
+                            <h3 class="stepper-title">
+                                Completed
+                            </h3>
+                        </div>
+                        <!--end::Step 4-->
+                    </div>
+                    <!--end::Nav-->
+
+                    <!--begin::Form-->
+                    <form class="mx-auto mw-500px w-100 pt-15 pb-10" novalidate="novalidate" id="kt_modal_offer_a_deal_form">
+                        <!--begin::Type-->
+<div class="current" data-kt-stepper-element="content">
+    <!--begin::Wrapper-->
+    <div class="w-100">
+        <!--begin::Heading-->
+        <div class="mb-13">
+            <!--begin::Title-->
+            <h2 class="mb-3">Deal Type</h2>
+            <!--end::Title-->
+
+            <!--begin::Description-->
+            <div class="text-muted fw-semibold fs-5">
+                If you need more info, please check out
+                <a href="#" class="link-primary fw-bold">FAQ Page</a>.
+            </div>
+            <!--end::Description-->
+        </div>
+        <!--end::Heading-->
+
+        <!--begin::Input group-->
+        <div class="fv-row mb-15" data-kt-buttons="true">
+            <!--begin::Option-->
+            <label class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6 mb-6 active">
+                <!--begin::Input-->
+                <input class="btn-check" type="radio" checked="checked" name="offer_type" value="1"/>
+                <!--end::Input-->
+
+                <!--begin::Label-->
+                <span class="d-flex">
+                    <!--begin::Icon-->
+                    <i class="ki-duotone ki-profile-circle fs-3hx"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>                    <!--end::Icon-->
+
+                    <!--begin::Info-->
+                    <span class="ms-4">
+                        <span class="fs-3 fw-bold text-gray-900 mb-2 d-block">Personal Deal</span>
+
+                        <span class="fw-semibold fs-4 text-muted">
+                            If you need more info, please check it out
+                        </span>
+                    </span>
+                    <!--end::Info-->
+                </span>
+                <!--end::Label-->
+            </label>
+            <!--end::Option-->
+
+            <!--begin::Option-->
+            <label class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6">
+                <!--begin::Input-->
+                <input class="btn-check" type="radio" name="offer_type" value="2"/>
+                <!--end::Input-->
+
+                <!--begin::Label-->
+                <span class="d-flex">
+                    <!--begin::Icon-->
+                    <i class="ki-duotone ki-element-11 fs-3hx"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>                    <!--end::Icon-->
+
+                    <!--begin::Info-->
+                    <span class="ms-4">
+                        <span class="fs-3 fw-bold text-gray-900 mb-2 d-block">Corporate Deal</span>
+
+                        <span class="fw-semibold fs-4 text-muted">
+                            Create corporate account to manage users
+                        </span>
+                    </span>
+                    <!--end::Info-->
+                </span>
+                <!--end::Label-->
+            </label>
+            <!--end::Option-->
+        </div>
+        <!--end::Input group-->
+
+        <!--begin::Actions-->
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-lg btn-primary" data-kt-element="type-next">
+                <span class="indicator-label">
+                    Offer Details
+                </span>
+                <span class="indicator-progress">
+                    Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                </span>
+            </button>
+        </div>
+        <!--end::Actions-->
+    </div>
+    <!--end::Wrapper-->
+</div>
+<!--end::Type-->
+                        <!--begin::Details-->
+<div data-kt-stepper-element="content">
+    <!--begin::Wrapper-->
+    <div class="w-100">
+        <!--begin::Heading-->
+        <div class="mb-13">
+            <!--begin::Title-->
+            <h2 class="mb-3">Deal Details</h2>
+            <!--end::Title-->
+
+            <!--begin::Description-->
+            <div class="text-muted fw-semibold fs-5">
+                If you need more info, please check out
+                <a href="#" class="link-primary fw-bold">FAQ Page</a>.
+            </div>
+            <!--end::Description-->
+        </div>
+        <!--end::Heading-->
+
+        <!--begin::Input group-->
+        <div class="fv-row mb-8">
+            <!--begin::Label-->
+            <label class="required fs-6 fw-semibold mb-2">Customer</label>
+            <!--end::Label-->
+
+            <!--begin::Input-->
+            <select class="form-select form-select-solid" data-control="select2" data-placeholder="Select an option" name="details_customer">
+                <option></option>
+                <option value="1" selected>Keenthemes</option>
+                <option value="2">CRM App</option>
+            </select>
+            <!--end::Input-->
+        </div>
+        <!--end::Input group-->
+
+        <!--begin::Input group-->
+        <div class="fv-row mb-8">
+            <!--begin::Label-->
+            <label class="required fs-6 fw-semibold mb-2">Deal Title</label>
+            <!--end::Label-->
+
+            <!--begin::Input-->
+            <input type="text" class="form-control form-control-solid" placeholder="Enter Deal Title" name="details_title" value="Marketing Campaign"/>
+            <!--end::Input-->
+        </div>
+        <!--end::Input group-->
+
+        <!--begin::Input group-->
+        <div class="fv-row mb-8">
+            <!--begin::Label-->
+            <label class="fs-6 fw-semibold mb-2">Deal Description</label>
+            <!--end::Label-->
+
+            <!--begin::Label-->
+            <textarea class="form-control form-control-solid" rows="3" placeholder="Enter Deal Description" name="details_description">
+                Experience share market at your fingertips with TICK PRO stock investment mobile trading app
+            </textarea>
+            <!--end::Label-->
+        </div>
+        <!--end::Input group-->
+
+        <!--begin::Input group-->
+        <div class="fv-row mb-8">
+            <label class="required fs-6 fw-semibold mb-2">Activation Date</label>
+            <div class="position-relative d-flex align-items-center">
+                <!--begin::Icon-->
+                <i class="ki-duotone ki-calendar-8 fs-2 position-absolute mx-4"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></i>                <!--end::Icon-->
+
+                <!--begin::Datepicker-->
+                <input class="form-control form-control-solid ps-12" placeholder="Pick date range"  name="details_activation_date"/>
+                <!--end::Datepicker-->
+            </div>
+        </div>
+        <!--end::Input group-->
+
+        <!--begin::Input group-->
+        <div class="fv-row mb-15">
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-stack">
+                <!--begin::Label-->
+                <div class="me-5">
+                    <label class="required fs-6 fw-semibold">Notifications</label>
+                    <div class="fs-7 fw-semibold text-muted">Allow Notifications by Phone or Email</div>
+                </div>
+                <!--end::Label-->
+                
+                <!--begin::Checkboxes-->
+                <div class="d-flex">
+                    <!--begin::Checkbox-->
+                    <label class="form-check form-check-custom form-check-solid me-10">
+                        <!--begin::Input-->
+                        <input class="form-check-input h-20px w-20px" type="checkbox" value="email" name="details_notifications[]"/>
+                        <!--end::Input-->
+
+                        <!--begin::Label-->
+                        <span class="form-check-label fw-semibold">
+                            Email
+                        </span>
+                        <!--end::Label-->
+                    </label>
+                    <!--end::Checkbox-->
+
+                    <!--begin::Checkbox-->
+                    <label class="form-check form-check-custom form-check-solid">
+                        <!--begin::Input-->
+                        <input class="form-check-input h-20px w-20px" type="checkbox" value="phone" checked name="details_notifications[]"/>
+                        <!--end::Input-->
+
+                        <!--begin::Label-->
+                        <span class="form-check-label fw-semibold">
+                            Phone
+                        </span>
+                        <!--end::Label-->
+                    </label>
+                    <!--end::Checkbox-->
+                </div>
+                <!--end::Checkboxes-->
+            </div>
+            <!--begin::Wrapper-->
+        </div>
+        <!--end::Input group-->
+
+        <!--begin::Actions-->
+        <div class="d-flex flex-stack">
+            <button type="button" class="btn btn-lg btn-light me-3" data-kt-element="details-previous">
+                Deal Type
+            </button>
+            
+            <button type="button" class="btn btn-lg btn-primary" data-kt-element="details-next">
+                <span class="indicator-label">
+                Financing
+                </span>
+                <span class="indicator-progress">
+                    Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                </span>
+            </button>
+        </div>
+        <!--end::Actions-->
+    </div>
+    <!--end::Wrapper-->
+</div>
+<!--end::Details-->
+                        <!--begin::Budget-->
+<div data-kt-stepper-element="content">
+    <!--begin::Wrapper-->
+    <div class="w-100">
+        <!--begin::Heading-->
+        <div class="mb-13">
+            <!--begin::Title-->
+            <h2 class="mb-3">Finance</h2>
+            <!--end::Title-->
+
+            <!--begin::Description-->
+            <div class="text-muted fw-semibold fs-5">
+                If you need more info, please check out
+                <a href="#" class="link-primary fw-bold">FAQ Page</a>.
+            </div>
+            <!--end::Description-->
+        </div>
+        <!--end::Heading-->
+
+        <!--begin::Input group-->
+        <div class="fv-row mb-8">
+            <!--begin::Label-->
+            <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                <span class="required">Setup Budget</span>
+                
+<span class="lh-1 ms-1"  data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="
+		&lt;div class=&#039;p-4 rounded bg-light&#039;&gt;
+			&lt;div class=&#039;d-flex flex-stack text-muted mb-4&#039;&gt;
+				&lt;i class=&quot;ki-duotone ki-bank fs-3 me-3&quot;&gt;&lt;span class=&quot;path1&quot;&gt;&lt;/span&gt;&lt;span class=&quot;path2&quot;&gt;&lt;/span&gt;&lt;/i&gt;
+				&lt;div class=&#039;fw-bold&#039;&gt;INCBANK **** 1245 STATEMENT&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&#039;d-flex flex-stack fw-semibold text-gray-600&#039;&gt;
+				&lt;div&gt;Amount&lt;/div&gt;
+				&lt;div&gt;Transaction&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&#039;separator separator-dashed my-2&#039;&gt;&lt;/div&gt;
+
+			&lt;div class=&#039;d-flex flex-stack text-gray-900 fw-bold mb-2&#039;&gt;
+				&lt;div&gt;USD345.00&lt;/div&gt;
+				&lt;div&gt;KEENTHEMES*&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&#039;d-flex flex-stack text-muted mb-2&#039;&gt;
+				&lt;div&gt;USD75.00&lt;/div&gt;
+				&lt;div&gt;Hosting fee&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&#039;d-flex flex-stack text-muted&#039;&gt;
+				&lt;div&gt;USD3,950.00&lt;/div&gt;
+				&lt;div&gt;Payrol&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	" >
+	<i class="ki-duotone ki-information-5 text-gray-500 fs-6"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i></span>            </label>
+            <!--end::Label-->
+
+            <!--begin::Dialer-->
+            <div class="position-relative w-lg-250px"
+                id="kt_modal_finance_setup"
+                data-kt-dialer="true"
+                data-kt-dialer-min="50"
+                data-kt-dialer-max="50000"
+                data-kt-dialer-step="100"
+                data-kt-dialer-prefix="$"
+                data-kt-dialer-decimals="2">
+
+                <!--begin::Decrease control-->
+                <button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+                    <i class="ki-duotone ki-minus-circle fs-1"><span class="path1"></span><span class="path2"></span></i>                </button>
+                <!--end::Decrease control-->
+
+                <!--begin::Input control-->
+                <input type="text" class="form-control form-control-solid border-0 ps-12" data-kt-dialer-control="input" placeholder="Amount" name="finance_setup" readonly value="$50"/>
+                <!--end::Input control-->
+
+                <!--begin::Increase control-->
+                <button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+                    <i class="ki-duotone ki-plus-circle fs-1"><span class="path1"></span><span class="path2"></span></i>                </button>
+                <!--end::Increase control-->
+            </div>
+            <!--end::Dialer-->  
+        </div>
+        <!--end::Input group-->
+
+        <!--begin::Input group-->
+        <div class="fv-row mb-8">
+            <!--begin::Label-->
+            <label class="fs-6 fw-semibold mb-2">Budget Usage</label>
+            <!--end::Label-->
+
+            <!--begin::Row-->
+            <div class="row g-9" data-kt-buttons="true" data-kt-buttons-target="[data-kt-button='true']">
+                <!--begin::Col-->
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                    <!--begin::Option-->
+                    <label class="btn btn-outline btn-outline-dashed btn-active-light-primary active d-flex text-start p-6" data-kt-button="true">
+                        <!--begin::Radio-->
+                        <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+                            <input class="form-check-input" type="radio" name="finance_usage" value="1" checked="checked" />
+                        </span>
+                        <!--end::Radio-->
+
+                        <!--begin::Info-->
+                        <span class="ms-5">
+                            <span class="fs-4 fw-bold text-gray-800 mb-2 d-block">Precise Usage</span>
+
+                            <span class="fw-semibold fs-7 text-gray-600">
+                                Withdraw money to your bank account per transaction under $50,000 budget
+                            </span>
+                        </span>
+                        <!--end::Info-->
+                    </label>
+                    <!--end::Option-->
+                </div>
+                <!--end::Col-->
+
+                <!--begin::Col-->
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                    <!--begin::Option-->
+                    <label class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6" data-kt-button="true">
+                        <!--begin::Radio-->
+                        <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+                            <input class="form-check-input" type="radio" name="finance_usage" value="2" />
+                        </span>
+                        <!--end::Radio-->
+
+                        <!--begin::Info-->
+                        <span class="ms-5">
+                            <span class="fs-4 fw-bold text-gray-800 mb-2 d-block">Extreme Usage</span>
+                            <span class="fw-semibold fs-7 text-gray-600">
+                                Withdraw money to your bank account per transaction under $50,000 budget
+                            </span>
+                        </span>
+                        <!--end::Info-->
+                    </label>
+                    <!--end::Option-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Input group-->
+
+        <!--begin::Input group-->
+        <div class="fv-row mb-15">
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-stack">
+                <!--begin::Label-->
+                <div class="me-5">
+                    <label class="fs-6 fw-semibold">Allow Changes in Budget</label>
+                    <div class="fs-7 fw-semibold text-muted">If you need more info, please check budget planning</div>
+                </div>
+                <!--end::Label-->
+
+                <!--begin::Switch-->
+                <label class="form-check form-switch form-check-custom form-check-solid">
+                    <input class="form-check-input" type="checkbox" value="1" name="finance_allow" checked="checked"/>
+                    <span class="form-check-label fw-semibold text-muted">
+                        Allowed
+                    </span>
+                </label>
+                <!--end::Switch-->
+            </div>
+            <!--end::Wrapper-->
+        </div>
+        <!--end::Input group-->
+
+        <!--begin::Actions-->
+        <div class="d-flex flex-stack">
+            <button type="button" class="btn btn-lg btn-light me-3" data-kt-element="finance-previous">
+                Project Settings
+            </button>
+            
+            <button type="button" class="btn btn-lg btn-primary" data-kt-element="finance-next">
+                <span class="indicator-label">
+                    Build Team
+                </span>
+                <span class="indicator-progress">
+                    Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                </span>
+            </button>
+        </div>
+        <!--end::Actions-->
+    </div>
+    <!--end::Wrapper-->
+</div>
+<!--end::Budget-->
+                        <!--begin::Complete-->
+<div data-kt-stepper-element="content">
+    <!--begin::Wrapper-->
+    <div class="w-100">
+        <!--begin::Heading-->
+        <div class="mb-13">
+            <!--begin::Title-->
+            <h2 class="mb-3">Deal Created!</h2>
+            <!--end::Title-->
+
+            <!--begin::Description-->
+            <div class="text-muted fw-semibold fs-5">
+                If you need more info, please check out
+                <a href="#" class="link-primary fw-bold">FAQ Page</a>.
+            </div>
+            <!--end::Description-->
+        </div>
+        <!--end::Heading-->
+
+         <!--begin::Actions-->
+         <div class="d-flex flex-center pb-20">
+            <button type="button" class="btn btn-lg btn-light me-3" data-kt-element="complete-start">
+                Create New Deal
+            </button>
+
+            <a href="#" class="btn btn-lg btn-primary" data-bs-toggle="tooltip" title="Coming Soon">
+                View Deal
+            </a>
+        </div>
+        <!--end::Actions-->
+
+        <!--begin::Illustration-->
+        <div class="text-center px-4">
+            <img src="../../assets/media/illustrations/sigma-1/20.png" alt="" class="mw-100 mh-300px"/> 
+        </div>
+        <!--end::Illustration-->
+    </div>
+</div>
+<!--end::Complete-->                    </form>
+                    <!--end::Form-->
+                </div>
+                <!--end::Stepper-->
+            </div>
+            <!--begin::Modal body-->
+        </div>
+    </div>
+</div>
+<!--end::Modal - Offer A Deal--><!--end::Modals--></div>
+<!--end::Container-->				</div>
+				<!--end::Content-->
+
+                <!--end::Header-->
+                <!--begin::Content-->
+                <div class="container-xxl d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Container-->
+                    <!-- include error -->
+                    <!-- validation error -->
+                    <!-- include success -->
+
+              
+
+                
+            </div>
+            <!--end::Container-->
+        </div>
+        <!--end::Content-->
+
+
+        <!--end::Root-->
+
+
+        <!--end::Modal - Users Search--> <!--end::Modals-->
+
+        <!--begin::Javascript-->
+        <script>
+            var hostUrl = "assets/index.html";        </script>
+
+        <!--begin::Global Javascript Bundle(mandatory for all pages)-->
+        <script src="assets/plugins/global/plugins.bundle.js"></script>
+        <script src="assets/js/scripts.bundle.js"></script>
+        <!--end::Global Javascript Bundle-->
+
+        <!--begin::Vendors Javascript(used for this page only)-->
+        <script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+        <!-- amCharts 5 scripts -->
+        <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+        <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+        <!--end::Vendors Javascript-->
+
+        <!--begin::Custom Javascript(used for this page only)-->
+        <script src="assets/js/widgets.bundle.js"></script>
+        <script src="assets/js/custom/widgets.js"></script>
+        <script src="assets/js/custom/apps/chat/chat.js"></script>
+        <script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+        <script src="assets/js/custom/utilities/modals/create-app.js"></script>
+        <script src="assets/js/custom/utilities/modals/users-search.js"></script>
+        <!--end::Custom Javascript-->
+        <!--end::Javascript-->
+
+
+</body>
+<!--end::Body-->
+
+<!-- Mirrored from preview.keenthemes.com/metronic8/demo7/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Jul 2025 17:10:13 GMT -->
+
+</html>
