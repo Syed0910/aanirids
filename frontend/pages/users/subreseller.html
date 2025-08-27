@@ -447,7 +447,7 @@
                                 </div>
                             </div>
                         </div>
-
+        <div class="table-responsive m-6 p-6">
         <table class="table table-row-dashed table-row-gray-200 align-middle gs-0 gy-4" id="myTable">
   <thead>
     <tr class="border-0">
@@ -497,8 +497,8 @@
       <td class="col-last-login">2025-07-21 21:43:10</td>
     </tr>
   </tbody>
-</table>
-
+        </table>
+        </div>
                         <div class="card-body pt-0">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="text-muted fs-7 mb-0">Showing 1 to 1 of 1 records</div>
@@ -1851,21 +1851,30 @@ function exportTable(type) {
                             <label class="form-label">Country</label>
                             <select class="form-select">
                                 <option value="">Select A Country</option>
-                                <option value="india">India</option>
-                                <option value="usa">USA</option>
-                                <option value="uk">UK</option>
                             </select>
                         </div>
                         <div class="col">
                             <label class="form-label">Province</label>
                             <select class="form-select">
                                 <option value="">Select A Province</option>
-                                <option value="maharashtra">Maharashtra</option>
-                                <option value="karnataka">Karnataka</option>
-                                <option value="punjab">Punjab</option>
                             </select>
                         </div>
                     </div>
+
+                    <!-- Added City & Address -->
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label">City</label>
+                            <select class="form-select">
+                                <option value="">Select A City</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="form-label">Address</label>
+                            <input type="text" class="form-control" placeholder="Enter Address">
+                        </div>
+                    </div>
+
                 </form>
             </div>
 

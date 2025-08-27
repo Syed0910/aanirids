@@ -343,7 +343,7 @@
                             </div>
 
                             <!--end::Card header-->
-                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pb-8 w-100">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 px-4 pb-8 w-100">
                                 <!-- Left side: Dropdown + Buttons -->
                                 <div class="d-flex align-items-center flex-wrap gap-2">
                                     <!-- Dropdown -->
@@ -462,7 +462,7 @@
                             </div>
                         </div>
 
-                        <div class="table-responsive m-2 p-2">
+                        <div class="table-responsive m-6 p-6">
                         <table class="table table-row-dashed table-row-gray-200 align-middle gs-0 gy-4" id="myTable">
                         <thead>
                             <tr class="border-0">
@@ -752,21 +752,30 @@ function exportTable(type) {
                             <label class="form-label">Country</label>
                             <select class="form-select">
                                 <option value="">Select A Country</option>
-                                <option value="india">India</option>
-                                <option value="usa">USA</option>
-                                <option value="uk">UK</option>
                             </select>
                         </div>
                         <div class="col">
                             <label class="form-label">Province</label>
                             <select class="form-select">
                                 <option value="">Select A Province</option>
-                                <option value="maharashtra">Maharashtra</option>
-                                <option value="karnataka">Karnataka</option>
-                                <option value="punjab">Punjab</option>
                             </select>
                         </div>
                     </div>
+
+                    <!-- Added City & Address -->
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label">City</label>
+                            <select class="form-select">
+                                <option value="">Select A City</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="form-label">Address</label>
+                            <input type="text" class="form-control" placeholder="Enter Address">
+                        </div>
+                    </div>
+
                 </form>
             </div>
 
