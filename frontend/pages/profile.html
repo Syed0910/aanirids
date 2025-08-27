@@ -187,7 +187,7 @@
     <!--end::Wrapper-->
 
     <!--begin::Toolbar wrapper-->
-  <div class="d-flex flex-shrink-0">
+  <div class="d-flex flex-wrap">
             <!--begin::Invite user-->
             <div class="d-flex ms-3">
                 <a href="#" class="btn btn-flex flex-center btn-light btn-color-gray-600 btn-active-primary w-40px w-md-auto h-40px px-0 px-md-6"  data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends" >
@@ -275,7 +275,7 @@
             <div class="container-xxl d-flex flex-column flex-column-fluid content mx-2 pt-0" id="kt_content">
 					<!--begin::Container-->
                    <div class="container-xxl px-0" id="kt_content_container">
-    <div class="d-flex align-items-center justify-content-start gap-2 gap-lg-3 mb-8">
+    <div class="d-flex flex-wrap align-items-center justify-content-start gap-2 gap-lg-3 mb-8 flex-wrap-sm">
         <!-- Profile Settings Button (modal trigger) -->
         
         <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_Profile_Settings">
@@ -311,7 +311,7 @@
             <!--end::Pic-->
 
             <!--begin::Info-->
-            <div class="flex-shrink-1 flex-grow-0">
+            <div class="flex-grow-1">
                 <!--begin::Title-->
                 <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
                     <!--begin::User-->
@@ -451,7 +451,7 @@
                 <!--end::Title-->
 
                 <!--begin::Stats-->
-<div class="d-flex gap-4">
+<div class="d-flex gap-4 flex-wrap">
     <!--begin::Stat - Packages-->
     <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4">
         <div class="d-flex align-items-center">
@@ -1326,9 +1326,41 @@
                         <td class="col-salesperson"><span class="badge badge-light-primary">sksadar (Admin)</span></td>
                     </tr>
                 </tbody>
+                
             </table>
         </div>
-    </div>
+                </div>
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="text-muted fs-7 mb-0">Showing 1 to 50 of 60 records</div>
+                        <div class="pagination-container">
+                            <ul class="pagination mb-0">
+                                <li class="paginate_button page-item previous disabled" id="roles_table_previous">
+                                    <a href="#" aria-controls="roles_table" data-dt-idx="0" tabindex="0" class="page-link">
+                                        <i class="ki-duotone ki-arrow-left fs-3">
+                                            <span class="path1"></span>
+                                            <span class="path2"></span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="paginate_button page-item active">
+                                    <a href="#" aria-controls="roles_table" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                </li>
+                                <li class="paginate_button page-item">
+                                    <a href="#" aria-controls="roles_table" data-dt-idx="1" tabindex="0" class="page-link">2</a>
+                                </li>
+                                <li class="paginate_button page-item next disabled" id="roles_table_next">
+                                    <a href="#" aria-controls="roles_table" data-dt-idx="2" tabindex="0" class="page-link">
+                                        <i class="ki-duotone ki-arrow-right fs-3">
+                                            <span class="path1"></span>
+                                            <span class="path2"></span>
+                                        </i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
