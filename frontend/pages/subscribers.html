@@ -12796,7 +12796,69 @@ License: For each use you must have a valid license purchased only from above li
         </div>
     </div>
 <!--end::Modal-->
-</body>
 <!--end::Modal-->
+<div class="card-body pt-0">
+    <div class="table-responsive">
+        <table class="table align-middle table-row-dashed fs-6 gy-4 w-100" id="subscriberTable">
+            <thead>
+                <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+                    <th class="min-w-50px">ID</th>
+                    <th class="min-w-50px">Photo</th>
+                    <th class="min-w-150px">Name</th>
+                    <th class="min-w-120px">Username</th>
+                    <th class="min-w-150px">Expiration</th>
+                    <th class="min-w-150px">Packages</th>
+                    <th class="min-w-150px">Salesperson</th>
+                </tr>
+            </thead>
+            <tbody id="subscriberBody" class="text-gray-600 fw-semibold">
+                <!-- Dynamic subscriber rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    // Fetch subscribers from backend
+    fetch('http://localhost:3000/api/subscribers')
+        .then(response => {
+            console.log('Raw response:', response); // Logs the Response object
+            return response.json(); // Convert response to JSON
+        })
+        .then(subscribers => {
+            console.log('Data received:', subscribers); // Logs the actual JSON data
+
+            const tbody = document.getElementById('subscriberBody');
+            tbody.innerHTML = ''; // Clear any existing rows
+
+            subscribers.forEach(sub => {
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+                    <td>${sub.id}</td>
+                    <td><img src="${sub.photo || 'https://keenthemes.com/metronic/assets/media/avatars/blank.png'}" class="w-40px rounded-circle"></td>
+                    <td class="fw-bold">${sub.name}</td>
+                    <td>
+                        <span class="badge ${sub.status === 'Offline' ? 'badge-light-danger' : 'badge-light-success'} mb-1">${sub.status}</span><br>
+                        <a href="#" class="text-primary">${sub.username}</a>
+                    </td>
+                    <td><span class="badge badge-light-success">${sub.expiration}</span></td>
+                    <td><span class="badge badge-light-info">${sub.package}</span></td>
+                    <td><span class="badge badge-light-primary">${sub.salesperson}</span></td>
+                `;
+
+                tbody.appendChild(row);
+            });
+        })
+        .catch(err => {
+            console.error('Error fetching subscribers:', err);
+            document.getElementById('subscriberBody').innerHTML = `<tr><td colspan="7" class="text-center">Failed to load subscribers</td></tr>`;
+        });
+</script>
+
+
+
+
+</body>
 <!-- Mirrored from preview.keenthemes.com/metronic8/demo7/pages/user-profile/campaigns.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Jul 2025 17:13:49 GMT -->
 </html>

@@ -373,105 +373,136 @@
                 <input type="text" class="form-control form-control-sm" placeholder="Type and search">
             </div>
         </div>
-            <!--begin::Card body-->
-            <div class="card-body p-4">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="text-muted fs-7 mb-0">Showing no records</div>
-                    <div class="pagination-container">
-                        <ul class="pagination mb-0">
-                            <li class="paginate_button page-item previous disabled" id="roles_table_previous">
-                                <a href="#" aria-controls="roles_table" data-dt-idx="0" tabindex="0" class="page-link">
-                                    <i class="ki-duotone ki-arrow-left fs-3">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                    </i>
-                                </a>
-                            </li>
-                            <!--<li class="paginate_button page-item active">
-                                <a href="#" aria-controls="roles_table" data-dt-idx="1" tabindex="0" class="page-link">1</a>
-                            </li>-->
-                            <li class="paginate_button page-item next disabled" id="roles_table_next">
-                                <a href="#" aria-controls="roles_table" data-dt-idx="2" tabindex="0" class="page-link">
-                                    <i class="ki-duotone ki-arrow-right fs-3">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                    </i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+             <!--begin::Card body-->
+<div class="card-body pt-0">
+                <div class="table-responsive">
+                    <table class="table align-middle table-row-dashed fs-6 gy-4 w-100" id="subscriberTable">
+                        <thead>
+                            <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+                                <th class="min-w-50px">ID</th>
+                                <th class="min-w-50px">Actions</th>
+                                <th class="min-w-150px">Profile</th>
+                                <th class="min-w-150px">Profile_Status</th>
+                                <th class="min-w-150px">Expiration</th>
+                                <th class="min-w-150px">Password</th>
+                                <th class="min-w-150px">Packages</th>
+                                <th class="min-w-150px">Salesperson</th>
+                                <th class="min-w-120px">Balance</th>
+                                <th class="min-w-120px">Due</th>
+                                <th class="min-w-150px">NAS</th>
+                                <th class="min-w-150px">Identity</th>
+                                <th class="min-w-150px">Phone</th>
+                                <th class="min-w-150px">Email</th>
+                                <th class="min-w-150px">Country</th>
+                                <th class="min-w-150px">City</th>
+                                <th class="min-w-200px">Address</th>
+                                <th class="min-w-150px">Department</th>
+                                <th class="min-w-150px">Created At</th>
+                            </tr>
+                        </thead>
+                        <tbody id="subscriberBody" class="text-gray-600 fw-semibold">
+                            <!-- Dynamic subscriber rows will be inserted here -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
-                </div>
+    <!--end::Card body-->
                 
                <!--begin::Table-->
 
+                
+
   <!--begin::SMS Logs Table Card-->
-<div class="card">
-    <div class="card-body">  <!-- Added p-0 to remove padding -->
-        <div class="table-responsive" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
-            <table class="table align-middle table-row-dashed fs-6 gy-5" id="policyTable" style="min-width: 100%; width: auto;">
-                <thead>
-                    <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                        <th class="min-w-50px">ID</th>
-                        <th class="min-w-100px">Actions</th>
-                        <th class="min-w-150px">Profile</th>
-                        <th class="min-w-120px">Expiration</th>
-                        <th class="min-w-100px">NAS</th>
-                        <th class="min-w-80px">Port</th>
-                        <th class="min-w-100px">Type</th>
-                        <th class="min-w-150px">Profile</th>
-                        <th class="min-w-120px">Mac</th>
-                        <th class="min-w-120px">IPv4</th>
-                        <th class="min-w-150px">IPv6</th>
-                        <th class="min-w-120px">Start</th>
-                        <th class="min-w-120px">Update</th>
-                        <th class="min-w-100px">Uptime</th>
-                        <th class="min-w-100px">Upload</th>
-                        <th class="min-w-100px">Download</th>
-                        <th class="min-w-100px">Total</th>
-                    </tr>
-                </thead>
-                <tbody class="fw-semibold text-gray-600">
-                    <td colspan="17" class="text-center py-0">  <!-- colspan matches number of columns -->
-                <div class="d-flex flex-column align-items-center">
-                    <span class="fs-5 text-gray-600">No data available in the table</span>
-                </div>
-                    <!-- Example row -->
-                    <!--<tr>
-                        <td>1</td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="btn btn-light-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                    Actions
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Edit</a></li>
-                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                </ul>
-                            </div>
-                        </td>
-                        <td><a href="#" class="text-primary fw-bold">wnett_50mbps_ul</a></td>
-                        <td>2023-12-31</td>
-                        <td>NAS-01</td>
-                        <td>8080</td>
-                        <td>Standard</td>
-                        <td>Premium</td>
-                        <td>00:1A:2B:3C:4D:5E</td>
-                        <td>192.168.1.1</td>
-                        <td>2001:0db8:85a3::8a2e:0370:7334</td>
-                        <td>2023-01-01</td>
-                        <td>2023-06-15</td>
-                        <td>180 days</td>
-                        <td>50 GB</td>
-                        <td>120 GB</td>
-                        <td>170 GB</td>
-                    </tr>-->
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+<script>
+document.getElementById("subscriberForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const data = {
+    profile: document.getElementById('profile').value,
+    profile_status: document.getElementById('profile_status').value,
+    expiration: document.getElementById('expiration').value,
+    password: document.getElementById('password').value,
+    packages: document.getElementById('packages').value,
+    salesperson: document.getElementById('salesperson').value,
+    balance: parseFloat(document.getElementById('balance').value) || 0,
+    due: parseFloat(document.getElementById('due').value) || 0,
+    NAS: document.getElementById('NAS').value,
+    identity: document.getElementById('identity').value,
+    phone: document.getElementById('phone').value,
+    email: document.getElementById('email').value,
+    country: document.getElementById('country').value,
+    city: document.getElementById('city').value,
+    address: document.getElementById('address').value,
+    department: document.getElementById('department').value
+    created_at: document.getElementById('created_at').value
+  };
+
+  try {
+    const response = await fetch("http://localhost:3000/api/subscribers", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if (!response.ok) throw new Error(await response.text());
+
+    const result = await response.json();
+    console.log("✅ Subscriber created:", result);
+
+    // Close modal
+    const modalEl = document.getElementById('kt_modal_add_subscriber');
+    const modalInstance = bootstrap.Modal.getInstance(modalEl);
+    modalInstance.hide();
+
+    alert("Subscriber created successfully!");
+
+    // Reload subscribers table
+    loadSubscribers();
+
+  } catch (err) {
+    console.error("❌ Error creating subscriber:", err);
+    alert("Failed to create subscriber");
+  }
+});
+
+async function loadSubscribers() {
+  try {
+    const res = await fetch("http://localhost:3000/api/subscribers");
+    if (!res.ok) throw new Error("Failed to fetch subscribers");
+
+    const subscribers = await res.json();
+    const tbody = document.getElementById("subscriberBody"); // your table body ID
+    tbody.innerHTML = "";
+
+    subscribers.forEach(sub => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${sub.id}</td>
+        <td>${sub.profile}</td>
+        <td>${sub.profile_status}</td>
+        <td>${sub.expiration}</td>
+        <td>${sub.password}</td>
+        <td>${sub.packages}</td>
+        <td>${sub.salesperson}</td>
+        <td>${sub.balance}</td>
+        <td>${sub.due}</td>
+        <td>${sub.NAS}</td>
+        <td>${sub.identity}</td>
+        <td>${sub.phone}</td>
+        <td>${sub.email}</td>
+        <td>${sub.country}</td>
+        <td>${sub.city}</td>
+        <td>${sub.address}</td>
+        <td>${sub.department}</td>
+        <td>${sub.created_at}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  } catch (err) {
+    console.error("❌ Error loading subscribers:", err);
+  }
+}
+</script>
 <!--end::Card-->
 
 </div>
