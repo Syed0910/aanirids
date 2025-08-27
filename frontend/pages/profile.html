@@ -149,7 +149,7 @@
                 </div> 
             <!--end::Aside-->
                         <!--begin::Wrapper-->
-                        <div class="wrapper d-flex flex-column flex-row-fluid ms-lg-20" id="kt_wrapper">
+                        <div class="wrapper d-flex flex-column flex-row-fluid ms-lg-10" id="kt_wrapper">
                             <!--begin::Header-->
       <div id="kt_header" class="header" data-kt-sticky="true" data-kt-sticky-name="header" data-kt-sticky-offset="{default: '200px', lg: '300px'}" data-kt-sticky-enabled="true" style="animation-duration: 0.3s; top: 0px;">
 
@@ -662,7 +662,8 @@
 
     <!-- Reports Tab -->
     <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">
-        <div class="col-xxl-4">
+        <div class="d-flex gap-2 align-items-center justify-content-start">
+        <div class="col-xxl-4 border-1 border-gray-300">
                 
         <!--begin::Mixed Widget 5-->
         <div class="card card-xxl-stretch mb-xl-3">
@@ -671,121 +672,10 @@
                 <h3 class="card-title align-items-start flex-column">
                     <span class="card-label fw-bold fs-3 mb-1">Sales/Invoices Reports</span>
                 </h3>
-
-                <div class="card-toolbar">
-                    <!--begin::Menu-->
-                    <button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                        <i class="ki-duotone ki-category fs-6"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>            </button>
-                    
-        <!--begin::Menu 3-->
-        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3" data-kt-menu="true">
-            <!--begin::Heading-->
-            <div class="menu-item px-3">
-                <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">
-                    Payments
+                <div class="card-body">
+                    <!--Graph will appear here-->
                 </div>
-            </div>
-            <!--end::Heading-->
-
-            <!--begin::Menu item-->
-            <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3">
-                    Create Invoice
-                </a>
-            </div>
-            <!--end::Menu item-->
-
-            <!--begin::Menu item-->
-            <div class="menu-item px-3">
-                <a href="#" class="menu-link flex-stack px-3">
-                    Create Payment
-
-                    <span class="ms-2" data-bs-toggle="tooltip" aria-label="Specify a target name for future usage and reference" data-bs-original-title="Specify a target name for future usage and reference" data-kt-initialized="1">
-                        <i class="ki-duotone ki-information fs-6"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>            </span>
-                </a>
-            </div>
-            <!--end::Menu item-->
-
-            <!--begin::Menu item-->
-            <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3">
-                    Generate Bill
-                </a>
-            </div>
-            <!--end::Menu item-->
-
-            <!--begin::Menu item-->
-            <div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-end">
-                <a href="#" class="menu-link px-3">
-                    <span class="menu-title">Subscription</span>
-                    <span class="menu-arrow"></span>
-                </a>
-
-                <!--begin::Menu sub-->
-                <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                    <!--begin::Menu item-->
-                    <div class="menu-item px-3">
-                        <a href="#" class="menu-link px-3">
-                            Plans
-                        </a>
-                    </div>
-                    <!--end::Menu item-->
-
-                    <!--begin::Menu item-->
-                    <div class="menu-item px-3">
-                        <a href="#" class="menu-link px-3">
-                            Billing
-                        </a>
-                    </div>
-                    <!--end::Menu item-->
-
-                    <!--begin::Menu item-->            
-                    <div class="menu-item px-3">
-                        <a href="#" class="menu-link px-3">
-                            Statements
-                        </a>
-                    </div>
-                    <!--end::Menu item-->
-                    
-                    <!--begin::Menu separator-->
-                    <div class="separator my-2"></div>
-                    <!--end::Menu separator-->
-
-                    <!--begin::Menu item-->            
-                    <div class="menu-item px-3">
-                        <div class="menu-content px-3">
-                            <!--begin::Switch-->      
-                            <label class="form-check form-switch form-check-custom form-check-solid">
-                                <!--begin::Input-->   
-                                <input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked="checked" name="notifications">
-                                <!--end::Input-->   
-
-                                <!--end::Label-->   
-                                <span class="form-check-label text-muted fs-6">
-                                    Recuring
-                                </span>
-                                <!--end::Label-->   
-                            </label>
-                            <!--end::Switch-->   
-                        </div>
-                    </div>
-                    <!--end::Menu item-->
-                </div>
-                <!--end::Menu sub-->
-            </div>
-            <!--end::Menu item-->
-
-            <!--begin::Menu item-->
-            <div class="menu-item px-3 my-1">
-                <a href="#" class="menu-link px-3">
-                    Settings
-                </a>
-            </div>
-            <!--end::Menu item-->
-        </div>
-        <!--end::Menu 3-->
-                    <!--end::Menu-->
-                </div>
+          
             </div>
             <!--end::Header-->
 
@@ -794,10 +684,10 @@
             <!--end::Body-->
         </div>
         <!--end::Mixed Widget 5-->
-            </div>
+        </div>
 
 
-            <div class="col-xxl-4">
+        <div class="col-xxl-4">
                 
         <!--begin::Mixed Widget 5-->
         <div class="card card-xxl-stretch mb-xl-3">
@@ -807,120 +697,10 @@
                     <span class="card-label fw-bold fs-3 mb-1">Payments Reports</span>
                 </h3>
 
-                <div class="card-toolbar">
-                    <!--begin::Menu-->
-                    <button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                        <i class="ki-duotone ki-category fs-6"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>            </button>
-                    
-        <!--begin::Menu 3-->
-        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3" data-kt-menu="true">
-            <!--begin::Heading-->
-            <div class="menu-item px-3">
-                <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">
-                    Payments
+                <div class="card-body">
+                    <!--Graph will appear here-->
                 </div>
-            </div>
-            <!--end::Heading-->
-
-            <!--begin::Menu item-->
-            <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3">
-                    Create Invoice
-                </a>
-            </div>
-            <!--end::Menu item-->
-
-            <!--begin::Menu item-->
-            <div class="menu-item px-3">
-                <a href="#" class="menu-link flex-stack px-3">
-                    Create Payment
-
-                    <span class="ms-2" data-bs-toggle="tooltip" aria-label="Specify a target name for future usage and reference" data-bs-original-title="Specify a target name for future usage and reference" data-kt-initialized="1">
-                        <i class="ki-duotone ki-information fs-6"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>            </span>
-                </a>
-            </div>
-            <!--end::Menu item-->
-
-            <!--begin::Menu item-->
-            <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3">
-                    Generate Bill
-                </a>
-            </div>
-            <!--end::Menu item-->
-
-            <!--begin::Menu item-->
-            <div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-end">
-                <a href="#" class="menu-link px-3">
-                    <span class="menu-title">Subscription</span>
-                    <span class="menu-arrow"></span>
-                </a>
-
-                <!--begin::Menu sub-->
-                <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                    <!--begin::Menu item-->
-                    <div class="menu-item px-3">
-                        <a href="#" class="menu-link px-3">
-                            Plans
-                        </a>
-                    </div>
-                    <!--end::Menu item-->
-
-                    <!--begin::Menu item-->
-                    <div class="menu-item px-3">
-                        <a href="#" class="menu-link px-3">
-                            Billing
-                        </a>
-                    </div>
-                    <!--end::Menu item-->
-
-                    <!--begin::Menu item-->            
-                    <div class="menu-item px-3">
-                        <a href="#" class="menu-link px-3">
-                            Statements
-                        </a>
-                    </div>
-                    <!--end::Menu item-->
-                    
-                    <!--begin::Menu separator-->
-                    <div class="separator my-2"></div>
-                    <!--end::Menu separator-->
-
-                    <!--begin::Menu item-->            
-                    <div class="menu-item px-3">
-                        <div class="menu-content px-3">
-                            <!--begin::Switch-->      
-                            <label class="form-check form-switch form-check-custom form-check-solid">
-                                <!--begin::Input-->   
-                                <input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked="checked" name="notifications">
-                                <!--end::Input-->   
-
-                                <!--end::Label-->   
-                                <span class="form-check-label text-muted fs-6">
-                                    Recuring
-                                </span>
-                                <!--end::Label-->   
-                            </label>
-                            <!--end::Switch-->   
-                        </div>
-                    </div>
-                    <!--end::Menu item-->
-                </div>
-                <!--end::Menu sub-->
-            </div>
-            <!--end::Menu item-->
-
-            <!--begin::Menu item-->
-            <div class="menu-item px-3 my-1">
-                <a href="#" class="menu-link px-3">
-                    Settings
-                </a>
-            </div>
-            <!--end::Menu item-->
-        </div>
-        <!--end::Menu 3-->
-                    <!--end::Menu-->
-                </div>
+          
             </div>
             <!--end::Header-->
 
@@ -932,14 +712,15 @@
             </div>
             <!--end::Body-->
         </div>
+        </div>
         <!--end::Mixed Widget 5-->
           <div class="row">
         <div class="row g-5 g-xl-8">
             <!-- Sales Reports -->
             <div class="col-xl-4">
-                <div class="card card-flush h-xl-100">
+                <div class="card card-flush h-xl-100 shadow-sm">
                     <!--begin::Header-->
-                    <div class="card-header pt-7 bg-info">
+                    <div class="card-header pt-7 bg-primary">
                         <!--begin::Title-->
                         <h3 class="card-title align-items-start flex-column text-white">
                             <span class="card-label fw-bold fs-2 mb-1">Sales Reports</span>
@@ -999,9 +780,9 @@
 
             <!-- Profit Reports -->
             <div class="col-xl-4">
-                <div class="card card-flush h-xl-100">
+                <div class="card card-flush h-xl-100 shadow-sm">
                     <!--begin::Header-->
-                    <div class="card-header pt-7 bg-success">
+                    <div class="card-header pt-7" style="background-color:#009ef7;">
                         <!--begin::Title-->
                         <h3 class="card-title align-items-start flex-column text-white">
                             <span class="card-label fw-bold fs-2 mb-1">Profit Reports</span>
@@ -1061,9 +842,9 @@
 
             <!-- Due Reports -->
             <div class="col-xl-4">
-                <div class="card card-flush h-xl-100">
+                <div class="card card-flush h-xl-100 shadow-sm">
                     <!--begin::Header-->
-                    <div class="card-header pt-7 bg-warning">
+                    <div class="card-header pt-7 bg-danger">
                         <!--begin::Title-->
                         <h3 class="card-title align-items-start flex-column text-dark">
                             <span class="card-label fw-bold fs-2 mb-1">Due Reports</span>
@@ -1123,9 +904,9 @@
 
             <!-- Subscribers Payments -->
             <div class="col-xl-4">
-                <div class="card card-flush h-xl-100">
+                <div class="card card-flush h-xl-100 shadow-sm">
                     <!--begin::Header-->
-                    <div class="card-header pt-7" style="background-color: #6f42c1;">
+                    <div class="card-header pt-7" style="background-color: #ffc700;">
                         <!--begin::Title-->
                         <h3 class="card-title align-items-start flex-column text-white">
                             <span class="card-label fw-bold fs-2 mb-1">Subscribers Payments</span>
@@ -1185,9 +966,9 @@
 
             <!-- Resellers Payments -->
             <div class="col-xl-4">
-                <div class="card card-flush h-xl-100">
+                <div class="card card-flush h-xl-100 shadow-sm">
                     <!--begin::Header-->
-                    <div class="card-header pt-7" style="background-color: #fd7e14;">
+                    <div class="card-header pt-7" style="background-color:#009ef7;">
                         <!--begin::Title-->
                         <h3 class="card-title align-items-start flex-column text-white">
                             <span class="card-label fw-bold fs-2 mb-1">Resellers Payments</span>
@@ -1247,9 +1028,9 @@
 
             <!-- Subresellers Payments -->
             <div class="col-xl-4">
-                <div class="card card-flush h-xl-100">
+                <div class="card card-flush h-xl-100 shadow-sm">
                     <!--begin::Header-->
-                    <div class="card-header pt-7" style="background-color: #20c997;">
+                    <div class="card-header pt-7" style="background-color:#50cd97;">
                         <!--begin::Title-->
                         <h3 class="card-title align-items-start flex-column text-white">
                             <span class="card-label fw-bold fs-2 mb-1">Subresellers Payments</span>
@@ -1259,12 +1040,112 @@
                     <!--end::Header-->
                     <!--begin::Body-->
                     <div class="card-body pt-4">
-                        <p class="text-gray-600 mb-0">No data available</p>
+                        <!--begin::Item-->
+                        <div class="d-flex flex-stack">
+                            <span class="text-gray-600 fw-semibold fs-6">Week</span>
+                            <span class="fw-bold fs-6">0.00</span>
+                        </div>
+                        <!--end::Item-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed my-3"></div>
+                        <!--end::Separator-->
+                        <!--begin::Item-->
+                        <div class="d-flex flex-stack">
+                            <span class="text-gray-600 fw-semibold fs-6">Month</span>
+                            <span class="fw-bold fs-6">0.00</span>
+                        </div>
+                        <!--end::Item-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed my-3"></div>
+                        <!--end::Separator-->
+                        <!--begin::Item-->
+                        <div class="d-flex flex-stack">
+                            <span class="text-gray-600 fw-semibold fs-6">Last Month</span>
+                            <span class="fw-bold fs-6">0.00</span>
+                        </div>
+                        <!--end::Item-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed my-3"></div>
+                        <!--end::Separator-->
+                        <!--begin::Item-->
+                        <div class="d-flex flex-stack">
+                            <span class="text-gray-600 fw-semibold fs-6">Year</span>
+                            <span class="fw-bold fs-6">0.00</span>
+                        </div>
+                        <!--end::Item-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed my-3"></div>
+                        <!--end::Separator-->
+                        <!--begin::Item-->
+                        <div class="d-flex flex-stack">
+                            <span class="text-gray-600 fw-semibold fs-6">Total</span>
+                            <span class="fw-bold fs-6">0.00</span>
+                        </div>
+                        <!--end::Item-->
                     </div>
                     <!--end::Body-->
                 </div>
             </div>
             <!--end::Col-->
+                  <div class="col-xl-4">
+                <div class="card card-flush h-xl-100 shadow-sm">
+                    <!--begin::Header-->
+                    <div class="card-header pt-7" style="background-color:#009ef7;">
+                        <!--begin::Title-->
+                        <h3 class="card-title align-items-start flex-column text-white">
+                            <span class="card-label fw-bold fs-2 mb-1">Retailers Payments</span>
+                        </h3>
+                        <!--end::Title-->
+                    </div>
+                    <!--end::Header-->
+                    <!--begin::Body-->
+                    <div class="card-body pt-4">
+                        <!--begin::Item-->
+                        <div class="d-flex flex-stack">
+                            <span class="text-gray-600 fw-semibold fs-6">Week</span>
+                            <span class="fw-bold fs-6">0.00</span>
+                        </div>
+                        <!--end::Item-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed my-3"></div>
+                        <!--end::Separator-->
+                        <!--begin::Item-->
+                        <div class="d-flex flex-stack">
+                            <span class="text-gray-600 fw-semibold fs-6">Month</span>
+                            <span class="fw-bold fs-6">0.00</span>
+                        </div>
+                        <!--end::Item-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed my-3"></div>
+                        <!--end::Separator-->
+                        <!--begin::Item-->
+                        <div class="d-flex flex-stack">
+                            <span class="text-gray-600 fw-semibold fs-6">Last Month</span>
+                            <span class="fw-bold fs-6">0.00</span>
+                        </div>
+                        <!--end::Item-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed my-3"></div>
+                        <!--end::Separator-->
+                        <!--begin::Item-->
+                        <div class="d-flex flex-stack">
+                            <span class="text-gray-600 fw-semibold fs-6">Year</span>
+                            <span class="fw-bold fs-6">0.00</span>
+                        </div>
+                        <!--end::Item-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed my-3"></div>
+                        <!--end::Separator-->
+                        <!--begin::Item-->
+                        <div class="d-flex flex-stack">
+                            <span class="text-gray-600 fw-semibold fs-6">Total</span>
+                            <span class="fw-bold fs-6">0.00</span>
+                        </div>
+                        <!--end::Item-->
+                    </div>
+                    <!--end::Body-->
+                </div>
+            </div>
         </div>
     </div>
         </div>
@@ -1275,117 +1156,174 @@
     <div class="tab-pane fade" id="subscribers" role="tabpanel" aria-labelledby="subscribers-tab">
         <div class="card">
             <div class="card-body">
-                <h3 class="fw-bold mb-4">Subscribers</h3>
+                <h3 class="fw-bold mb-4 ps-8">Subscribers</h3>
                  <div class="card-body pt-0">
+                    <div class="d-flex align-items-start flex-wrap gap-2 my-4 py-4">
+                <!-- Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        50
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">5</a></li>
+                        <li><a class="dropdown-item active" href="#">10</a></li>
+                        <li><a class="dropdown-item" href="#">25</a></li>
+                        <li><a class="dropdown-item" href="#">50</a></li>
+                        <li><a class="dropdown-item" href="#">100</a></li>
+                        <li><a class="dropdown-item" href="#">500</a></li>
+                        <li><a class="dropdown-item" href="#">1000</a></li>
+                        <li>
+                            <div class="dropdown-divider"></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Buttons -->
+          <button class="btn btn-sm btn-icon btn-light-primary" title="Print" onclick="exportTable('print')">
+            <i class="fas fa-print text-info-success fs-2"></i>
+            </button>
+<button class="btn btn-sm btn-icon btn-light-primary" title="Copy" onclick="exportTable('copy')">
+    <i class="fas fa-copy fs-2"></i>
+</button>
+<button class="btn btn-sm btn-icon btn-light-primary" title="PDF" onclick="exportTable('pdf')">
+    <i class="fas fa-file-pdf fs-2 text-danger"></i>
+</button>
+<button class="btn btn-sm btn-icon btn-light-primary" title="Excel" onclick="exportTable('xlsx')">
+    <i class="fas fa-file-excel fs-2 text-success"></i>
+</button>
+<button class="btn btn-sm btn-icon btn-light-primary" title="CSV" onclick="exportTable('csv')">
+    <i class="fas fa-file-csv fs-2 text-info"></i>
+</button>
+
+                <!-- View (opens modal) -->
+<!-- View Button -->
+<div class="dropdown">
+  <button class="btn btn-sm btn-light-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+    <i class="fas fa-eye fs-2 text-primary"></i>
+  </button>
+
+<!-- Column Menu (initially hidden) -->
+<div class="dropdown-menu p-2">
+  <label class="dropdown-item"><input type="checkbox" checked="" onchange="toggleColumn('col-id')"> ID</label>
+  <label class="dropdown-item"><input type="checkbox" checked="" onchange="toggleColumn('col-photo')"> Photo</label>
+  <label class="dropdown-item"><input type="checkbox" checked="" onchange="toggleColumn('col-name')"> Name </label>
+  <label class="dropdown-item"><input type="checkbox" checked="" onchange="toggleColumn('col-username')"> Username </label>
+  <label class="dropdown-item"><input type="checkbox" checked="" onchange="toggleColumn('col-expiration')"> Expiration </label>
+  <label class="dropdown-item"><input type="checkbox" checked="" onchange="toggleColumn('col-package')"> Packages </label>
+  <label class="dropdown-item"><input type="checkbox" checked="" onchange="toggleColumn('col-salesperson')"> Salesperson </label>
+</div>
+</div>
+                <!-- Filter (opens filter modal) -->
+            </div>
         <div class="table-responsive">
             <table class="table align-middle table-row-dashed fs-6 gy-4 w-100">
                 <thead>
                     <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
-                        <th class="min-w-50px">ID</th>
-                        <th class="min-w-50px">Photo</th>
-                        <th class="min-w-150px">Name</th>
-                        <th class="min-w-120px">Username</th>
-                        <th class="min-w-150px">Expiration</th>
-                        <th class="min-w-150px">Packages</th>
-                        <th class="min-w-150px">Salesperson</th>
+                        <th class="min-w-50px col-id">ID</th>
+                        <th class="min-w-50px col-photo">Photo</th>
+                        <th class="min-w-150px col-name">Name</th>
+                        <th class="min-w-120px col-username">Username</th>
+                        <th class="min-w-150px col-expiration">Expiration</th>
+                        <th class="min-w-150px col-package">Packages</th>
+                        <th class="min-w-150px col-salesperson">Salesperson</th>
                     </tr>
                 </thead>
                 <tbody class="text-gray-600 fw-semibold">
                     <tr>
-                        <td>2</td>
-                        <td><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
-                        <td class="fw-bold">Biyabani Mohammed Yunus Hussain</td>
-                        <td>
+                        <td class="col-id">2</td>
+                        <td class="col-photo"><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
+                        <td class="fw-bold col-name">Biyabani Mohammed Yunus Hussain</td>
+                        <td class="col-username">
                             <span class="badge badge-light-danger mb-1">Offline</span><br>
                             <a href="#" class="text-primary">hussain</a>
                         </td>
-                        <td><span class="badge badge-light-success">22 Jan 2026 19:45:00</span></td>
-                        <td><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
-                        <td><span class="badge badge-light-primary">sksadar (Admin)</span></td>
+                        <td class="col-expiration"><span class="badge badge-light-success">22 Jan 2026 19:45:00</span></td>
+                        <td class="col-package"><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
+                        <td class="col-salesperson"><span class="badge badge-light-primary ">sksadar (Admin)</span></td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
+                        <td class="col-id">3</td>
+                        <td class="col-photo"><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
                         <td class="fw-bold">Syed Muzammil Ahmed</td>
-                        <td>
+                        <td class="col-username">
                             <span class="badge badge-light-danger mb-1">Offline</span><br>
                             <a href="#" class="text-primary">syedahmed</a>
                         </td>
-                        <td><span class="badge badge-light-success">22 Jan 2026 19:45:00</span></td>
-                        <td><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
-                        <td><span class="badge badge-light-primary">sksadar (Admin)</span></td>
+                        <td class="col-expiration"><span class="badge badge-light-success">22 Jan 2026 19:45:00</span></td>
+                        <td class="col-package"><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
+                        <td class="col-salesperson"><span class="badge badge-light-primary">sksadar (Admin)</span></td>
                     </tr>
                     <tr>
-                        <td>4</td>
-                        <td><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
-                        <td class="fw-bold">Abid Kareem Khan</td>
-                        <td>
+                        <td class="col-id">4</td>
+                        <td class="col-photo"><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
+                        <td class="fw-bold  col-name">Abid Kareem Khan</td>
+                        <td class="col-username">
                             <span class="badge badge-light-danger mb-1">Offline</span><br>
                             <a href="#" class="text-primary">kareem</a>
                         </td>
-                        <td><span class="badge badge-light-success">22 Jan 2026 19:45:00</span></td>
-                        <td><span class="badge badge-light-info">WavesNett 50mbps UL 3M</span></td>
-                        <td><span class="badge badge-light-primary">sksadar (Admin)</span></td>
+                        <td class="col-expiration"><span class="badge badge-light-success">22 Jan 2026 19:45:00</span></td>
+                        <td class="col-package"><span class="badge badge-light-info">WavesNett 50mbps UL 3M</span></td>
+                        <td class="col-salesperson"><span class="badge badge-light-primary">sksadar (Admin)</span></td>
                     </tr>
                     <tr>
-                        <td>5</td>
-                        <td><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
-                        <td class="fw-bold">Md Mushtaq Ahmed</td>
-                        <td>
+                        <td class="col-id">5</td>
+                        <td class="col-photo"><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
+                        <td class="fw-bold  col-name">Md Mushtaq Ahmed</td>
+                        <td class="col-username">
                             <span class="badge badge-light-danger mb-1">Offline</span><br>
                             <a href="#" class="text-primary">mushtaq</a>
                         </td>
-                        <td><span class="badge badge-light-success">21 Jan 2026 19:45:00</span></td>
-                        <td><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
-                        <td><span class="badge badge-light-primary">sksadar (Admin)</span></td>
+                        <td class="col-expiration"><span class="badge badge-light-success">21 Jan 2026 19:45:00</span></td>
+                        <td class="col-package"><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
+                        <td class="col-salesperson"><span class="badge badge-light-primary">sksadar (Admin)</span></td>
                     </tr>
                     <tr>
-                        <td>6</td>
-                        <td><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
-                        <td class="fw-bold">Abdul Kareem</td>
-                        <td>
+                        <td class="col-id">6</td>
+                        <td class="col-photo"><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
+                        <td class="fw-bold  col-name">Abdul Kareem</td>
+                        <td class="col-username">
                             <span class="badge badge-light-danger mb-1">Offline</span><br>
                             <a href="#" class="text-primary">abdulkareem</a>
                         </td>
-                        <td><span class="badge badge-light-success">21 Jan 2026 14:34:00</span></td>
-                        <td><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
-                        <td><span class="badge badge-light-primary">sksadar (Admin)</span></td>
+                        <td class="col-expiration"><span class="badge badge-light-success">21 Jan 2026 14:34:00</span></td>
+                        <td class="col-package"><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
+                        <td class="col-salesperson"><span class="badge badge-light-primary">sksadar (Admin)</span></td>
                     </tr>
                     <tr>
-                        <td>8</td>
-                        <td><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
-                        <td class="fw-bold">Mohammad Shaik Owais</td>
-                        <td>
+                        <td class="col-id">8</td>
+                        <td class="col-photo"><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
+                        <td class="fw-bold  col-name">Mohammad Shaik Owais</td>
+                        <td class="col-username">
                             <span class="badge badge-light-danger mb-1">Offline</span><br>
                             <a href="#" class="text-primary">smshaik</a>
                         </td>
-                        <td><span class="badge badge-light-success">17 Oct 2025 01:04:00</span></td>
-                        <td><span class="badge badge-light-info">WavesNett 50mbps UL 3M</span></td>
-                        <td><span class="badge badge-light-primary">sksadar (Admin)</span></td>
+                        <td class="col-expiration"><span class="badge badge-light-success">17 Oct 2025 01:04:00</span></td>
+                        <td class="col-package"><span class="badge badge-light-info">WavesNett 50mbps UL 3M</span></td>
+                        <td class="col-salesperson"><span class="badge badge-light-primary">sksadar (Admin)</span></td>
                     </tr>
                     <tr>
-                        <td>9</td>
-                        <td><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
-                        <td class="fw-bold">Abdul Mateen Shabaz Siddiqui</td>
-                        <td>
+                        <td class="col-id">9</td>
+                        <td class="col-photo"><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
+                        <td class="fw-bold  col-name">Abdul Mateen Shabaz Siddiqui</td>
+                        <td class="col-username">
                             <span class="badge badge-light-danger mb-1">Offline</span><br>
                             <a href="#" class="text-primary">shahbaz</a>
                         </td>
-                        <td><span class="badge badge-light-success">01 Oct 2026 17:19:00</span></td>
-                        <td><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
-                        <td><span class="badge badge-light-primary">sksadar (Admin)</span></td>
+                        <td class="col-expiration"><span class="badge badge-light-success">01 Oct 2026 17:19:00</span></td>
+                        <td class="col-package"><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
+                        <td class="col-salesperson"><span class="badge badge-light-primary">sksadar (Admin)</span></td>
                     </tr>
                     <tr>
-                        <td>10</td>
-                        <td><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
-                        <td class="fw-bold">Abdul Sattar</td>
-                        <td>
+                        <td class="col-id">10</td>
+                        <td class="col-photo"><img src="https://keenthemes.com/metronic/assets/media/avatars/blank.png" class="w-40px rounded-circle"></td>
+                        <td class="fw-bold  col-name">Abdul Sattar</td>
+                        <td class="col-username">
                             <span class="badge badge-light-danger mb-1">Offline</span><br>
                             <a href="#" class="text-primary">mdmukhim</a>
                         </td>
-                        <td><span class="badge badge-light-success">01 Oct 2026 17:22:00</span></td>
-                        <td><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
-                        <td><span class="badge badge-light-primary">sksadar (Admin)</span></td>
+                        <td class="col-expiration"><span class="badge badge-light-success">01 Oct 2026 17:22:00</span></td>
+                        <td class="col-package"><span class="badge badge-light-info">WavesNett 50mbps UL 6M</span></td>
+                        <td class="col-salesperson"><span class="badge badge-light-primary">sksadar (Admin)</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -1490,14 +1428,29 @@
     </div>
 
     <!--begin::Card body-->
-    <div class="card-body p-4">
-        <div class="d-flex justify-content-between align-items-center">
+    <div class="card-body pt-0">
+        <div class="d-flex justify-content-between align-items-center px-4">
             <div class="text-muted fs-7 mb-0">Showing no records</div>
+                            <div class="pagination-container">
+                    <ul class="pagination mb-0">
+                        <li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous">
+                            <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">
+                                <i class="previous"></i>
+                            </a>
+                        </li>                        
+                        <li class="paginate_button page-item next disabled" id="DataTables_Table_0_next">
+                            <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">
+                            <i class="next"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
         </div>
     </div>
+    
 <div id="columnMenu" class="mt-3" style="display: none;"></div>
-    <div class="table-responsive" id="myTable">
-        <table class="table align-middle">
+    <div class="table-responsive overflow-x-auto px-10" id="myTable">
+        <table class="table align-middle table-row-dashed fs-6 gy-4 w-100 px-4">
             <thead>
                 <tr>
                     <th class="col-id">ID</th>
@@ -1525,26 +1478,20 @@
     <div class="card-body pt-0">
         <div class="d-flex justify-content-between align-items-center">
             <div class="text-muted fs-7 mb-0">Showing no records</div>
-            <div class="pagination-container">
-                <ul class="pagination mb-0">
-                    <li class="paginate_button page-item previous disabled" id="roles_table_previous">
-                        <a href="#" aria-controls="roles_table" data-dt-idx="0" tabindex="0" class="page-link">
-                            <i class="ki-duotone ki-arrow-left fs-3">
-                                <span class="path1"></span>
-                                <span class="path2"></span>
-                            </i>
-                        </a>
-                    </li>
-                    <li class="paginate_button page-item next disabled" id="roles_table_next">
-                        <a href="#" aria-controls="roles_table" data-dt-idx="1" tabindex="0" class="page-link">
-                            <i class="ki-duotone ki-arrow-right fs-3">
-                                <span class="path1"></span>
-                                <span class="path2"></span>
-                            </i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <div class="pagination-container">
+                    <ul class="pagination mb-0">
+                        <li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous">
+                            <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">
+                                <i class="previous"></i>
+                            </a>
+                        </li>                        
+                        <li class="paginate_button page-item next disabled" id="DataTables_Table_0_next">
+                            <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">
+                            <i class="next"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
         </div>
     </div>
 </div>

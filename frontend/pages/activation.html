@@ -489,24 +489,7 @@
 </div>
 
 <!-- Toggle Script -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const expiryToggle = document.querySelector('input[name="expiry_type"]');
-    const paymentToggle = document.querySelector('input[name="payment_status"]');
-    const expiryDiv = document.querySelector('.custom_expiry_date_div');
-    const paymentDiv = document.querySelector('.payment_div');
 
-    // Custom Expiry Toggle
-    expiryToggle.addEventListener("change", function () {
-        expiryDiv.style.display = this.checked ? "block" : "none";
-    });
-
-    // Payment Toggle
-    paymentToggle.addEventListener("change", function () {
-        paymentDiv.style.display = this.checked ? "block" : "none";
-    });
-});
-</script>
 
                 <!--end::Container-->
             </div>

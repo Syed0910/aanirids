@@ -283,198 +283,182 @@
 
            <!--end::button-->
         <!--begin::Card-->
-        <div class="card">
-            <!--begin::Card header-->
-            <div class="card-header border-0 d-flex flex-column">
-                <div class="card-title d-flex justify-content-between w-100 p-6">
-                <div class="d-flex align-items-center gap-4">
-                    <i class="fa-solid fa-users fa-1x"></i>
-                    <h3 class="card-label fw-bold fs-3 mb-0">Online Subscribers (0)</h3>
-                </div>
-                    
-                    <div class="d-flex align-items-end gap-1">
-                    <i class="fas fa-broom me-2 fs-5"></i>
-                    <h3 class="card-label fw-bold fs-3 mb-0">Stale Sessions(0)</h3>
-                </div>
-                
-                
-            </div>
-           
-            <!--end::Card header-->
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pb-8 w-100">
-    <!-- Left side: Dropdown + Buttons -->
-    <div class="d-flex align-items-center flex-wrap gap-2">
-        <!-- Dropdown -->
-        <div class="dropdown">
-            <button class="btn btn-sm btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                50
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#">0</a></li>
-                <li><a class="dropdown-item active" href="#">50</a></li>
-                <li><a class="dropdown-item" href="#">100</a></li>
-                <li><a class="dropdown-item" href="#">150</a></li>
-                <li><div class="dropdown-divider"></div></li>
-            </ul>
-        </div>
-
-        <!-- Buttons -->
-        <div class="d-flex gap-2 mb-4">
-    <!-- Print -->
-    <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="Print"
-            onclick="window.print()">
-        <i class="fas fa-print text-info-success fs-2"></i>
-    </button>
-
-    <!-- Copy -->
-    <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="Copy"
-            onclick="navigator.clipboard.writeText(document.querySelector('#smsTable').innerText)">
-        <i class="fas fa-copy fs-2"></i>
-    </button>
-
-    <!-- PDF -->
-    <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="PDF"
-            onclick="window.print()">
-        <i class="fas fa-file-pdf fs-2 text-danger"></i>
-    </button>
-
-    <!-- Excel -->
-    <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="Excel"
-            onclick="exportTable('xlsx')">
-        <i class="fas fa-file-excel fs-2 text-success"></i>
-    </button>
-
-    <!-- CSV -->
-    <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="CSV"
-            onclick="exportTable('csv')">
-        <i class="fas fa-file-csv fs-2 text-info"></i>
-    </button>
-
-    <!-- View -->
-    <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="View"
-            data-bs-toggle="modal" data-bs-target="#viewModal">
-        <i class="fas fa-eye fs-2 text-primary"></i>
-    </button>
-
-    <!-- Compact Mode -->
-    <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="Compact"
-            onclick="document.querySelector('#smsTable').classList.toggle('table-sm')">
-        <i class="bi bi-layout-sidebar-inset text-primary" style="font-size: 21px"></i>
-    </button>
-</div>
-
-
-
-
-
-    <!-- Right side: Search box -->
-            <div>
-                <label class="form-label small mb-1">Search</label>
-                <input type="text" class="form-control form-control-sm" placeholder="Type and search">
-            </div>
-        </div>
-            <!--begin::Card body-->
-            <div class="card-body p-4">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="text-muted fs-7 mb-0">Showing no records</div>
-                    <div class="pagination-container">
-                        <ul class="pagination mb-0">
-                            <li class="paginate_button page-item previous disabled" id="roles_table_previous">
-                                <a href="#" aria-controls="roles_table" data-dt-idx="0" tabindex="0" class="page-link">
-                                    <i class="ki-duotone ki-arrow-left fs-3">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                    </i>
-                                </a>
-                            </li>
-                            <!--<li class="paginate_button page-item active">
-                                <a href="#" aria-controls="roles_table" data-dt-idx="1" tabindex="0" class="page-link">1</a>
-                            </li>-->
-                            <li class="paginate_button page-item next disabled" id="roles_table_next">
-                                <a href="#" aria-controls="roles_table" data-dt-idx="2" tabindex="0" class="page-link">
-                                    <i class="ki-duotone ki-arrow-right fs-3">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                    </i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-                </div>
-                
-               <!--begin::Table-->
-
-  <!--begin::SMS Logs Table Card-->
 <div class="card">
-    <div class="card-body">  <!-- Added p-0 to remove padding -->
-        <div class="table-responsive" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
-            <table class="table align-middle table-row-dashed fs-6 gy-5" id="policyTable" style="min-width: 100%; width: auto;">
-                <thead>
-                    <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                        <th class="min-w-50px">ID</th>
-                        <th class="min-w-100px">Actions</th>
-                        <th class="min-w-150px">Profile</th>
-                        <th class="min-w-120px">Expiration</th>
-                        <th class="min-w-100px">NAS</th>
-                        <th class="min-w-80px">Port</th>
-                        <th class="min-w-100px">Type</th>
-                        <th class="min-w-150px">Profile</th>
-                        <th class="min-w-120px">Mac</th>
-                        <th class="min-w-120px">IPv4</th>
-                        <th class="min-w-150px">IPv6</th>
-                        <th class="min-w-120px">Start</th>
-                        <th class="min-w-120px">Update</th>
-                        <th class="min-w-100px">Uptime</th>
-                        <th class="min-w-100px">Upload</th>
-                        <th class="min-w-100px">Download</th>
-                        <th class="min-w-100px">Total</th>
-                    </tr>
-                </thead>
-                <tbody class="fw-semibold text-gray-600">
-                    <td colspan="17" class="text-center py-0">  <!-- colspan matches number of columns -->
-                <div class="d-flex flex-column align-items-center">
-                    <span class="fs-5 text-gray-600">No data available in the table</span>
-                </div>
-                    <!-- Example row -->
-                    <!--<tr>
-                        <td>1</td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="btn btn-light-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                    Actions
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Edit</a></li>
-                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                </ul>
-                            </div>
-                        </td>
-                        <td><a href="#" class="text-primary fw-bold">wnett_50mbps_ul</a></td>
-                        <td>2023-12-31</td>
-                        <td>NAS-01</td>
-                        <td>8080</td>
-                        <td>Standard</td>
-                        <td>Premium</td>
-                        <td>00:1A:2B:3C:4D:5E</td>
-                        <td>192.168.1.1</td>
-                        <td>2001:0db8:85a3::8a2e:0370:7334</td>
-                        <td>2023-01-01</td>
-                        <td>2023-06-15</td>
-                        <td>180 days</td>
-                        <td>50 GB</td>
-                        <td>120 GB</td>
-                        <td>170 GB</td>
-                    </tr>-->
-                </tbody>
-            </table>
-        </div>
+            <!--begin::Card header-->
+<div class="card-header border-0 d-flex flex-column">
+  <div class="card-title d-flex justify-content-between w-100 p-6">
+    <div class="d-flex align-items-center gap-4">
+      <i class="fa-solid fa-users fa-1x"></i>
+      <h3 class="card-label fw-bold fs-3 mb-0">Online Subscribers (0)</h3>
     </div>
+
+    <div class="d-flex align-items-end gap-1">
+      <i class="fas fa-broom me-2 fs-5"></i>
+      <h3 class="card-label fw-bold fs-3 mb-0">Stale Sessions (0)</h3>
+    </div>
+  </div>
 </div>
-<!--end::Card-->
+<!--end::Card header-->
+
+<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pb-8 w-100 px-10">
+  <!-- Left side: Dropdown + Buttons -->
+  <div class="d-flex align-items-center flex-wrap gap-2">
+    <!-- Dropdown -->
+    <div class="dropdown">
+      <button class="btn btn-sm btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        50
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">0</a></li>
+        <li><a class="dropdown-item active" href="#">50</a></li>
+        <li><a class="dropdown-item" href="#">100</a></li>
+        <li><a class="dropdown-item" href="#">150</a></li>
+        <li><div class="dropdown-divider"></div></li>
+      </ul>
+    </div>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2 mb-4">
+      <!-- Print -->
+      <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="Print" onclick="window.print()">
+        <i class="fas fa-print text-info-success fs-2"></i>
+      </button>
+
+      <!-- Copy -->
+      <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="Copy" onclick="navigator.clipboard.writeText(document.querySelector('#smsTable').innerText)">
+        <i class="fas fa-copy fs-2"></i>
+      </button>
+
+      <!-- PDF -->
+      <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="PDF" onclick="window.print()">
+        <i class="fas fa-file-pdf fs-2 text-danger"></i>
+      </button>
+
+      <!-- Excel -->
+      <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="Excel" onclick="exportTable('xlsx')">
+        <i class="fas fa-file-excel fs-2 text-success"></i>
+      </button>
+
+      <!-- CSV -->
+      <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="CSV" onclick="exportTable('csv')">
+        <i class="fas fa-file-csv fs-2 text-info"></i>
+      </button>
+
+      <!-- View -->
+      <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="View" data-bs-toggle="modal" data-bs-target="#viewModal">
+        <i class="fas fa-eye fs-2 text-primary"></i>
+      </button>
+
+      <!-- Compact Mode -->
+      <button type="button" class="btn btn-sm btn-icon btn-light-primary" title="Compact" onclick="document.querySelector('#smsTable').classList.toggle('table-sm')">
+        <i class="bi bi-layout-sidebar-inset text-primary" style="font-size: 21px"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Right side: Search box -->
+  <div>
+    <label class="form-label small mb-1">Search</label>
+    <input type="text" class="form-control form-control-sm" placeholder="Type and search">
+  </div>
+</div>
+
+<!--begin::Pagination + Info-->
+<div class="card-body">
+  <div class="d-flex justify-content-between align-items-center flex-wrap p-4">
+    <div class="text-muted fs-7 mb-0">Showing no records</div>
+    <ul class="pagination mb-0">
+      <li class="page-item previous disabled">
+        <a href="#" class="page-link" tabindex="-1">
+          <i class="ki-duotone ki-arrow-left fs-3"></i>
+        </a>
+      </li>
+      <!-- Example page number -->
+      <!-- <li class="page-item active"><a href="#" class="page-link">1</a></li> -->
+      <li class="page-item next disabled">
+        <a href="#" class="page-link">
+          <i class="ki-duotone ki-arrow-right fs-3"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--end::Pagination + Info-->
+
+<!--begin::Table-->
+<div class="card-body px-10">
+  <div class="table-responsive">
+    <table class="table align-middle table-row-dashed fs-6 gy-5 mb-0" id="smsTable">
+      <thead>
+        <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+          <th class="min-w-50px">ID</th>
+          <th class="min-w-100px">Actions</th>
+          <th class="min-w-150px">Profile</th>
+          <th class="min-w-120px">Expiration</th>
+          <th class="min-w-100px">NAS</th>
+          <th class="min-w-80px">Port</th>
+          <th class="min-w-100px">Type</th>
+          <th class="min-w-150px">Profile</th>
+          <th class="min-w-120px">Mac</th>
+          <th class="min-w-120px">IPv4</th>
+          <th class="min-w-150px">IPv6</th>
+          <th class="min-w-120px">Start</th>
+          <th class="min-w-120px">Update</th>
+          <th class="min-w-100px">Uptime</th>
+          <th class="min-w-100px">Upload</th>
+          <th class="min-w-100px">Download</th>
+          <th class="min-w-100px">Total</th>
+        </tr>
+      </thead>
+      <tbody class="fw-semibold text-gray-600">
+        <tr>
+          <td colspan="17" class="text-center py-5">
+            <div class="d-flex flex-column align-items-center">
+              <span class="fs-5 text-gray-600">No data available in the table</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!--end::Table-->
+
+<!-- Bootstrap Modal for View -->
+<div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewModalLabel">Preview</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>This will show preview of your SMS Template or table content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Minimal inline script for Excel/CSV -->
+<script>
+function exportTable(type) {
+  let table = document.querySelector("#smsTable");
+  let rows = Array.from(table.querySelectorAll("tr"))
+                  .map(tr => Array.from(tr.querySelectorAll("th,td"))
+                  .map(td => td.innerText).join(","))
+                  .join("\n");
+
+  let blob = new Blob([rows], { type: "text/csv" });
+  let url = URL.createObjectURL(blob);
+  let a = document.createElement("a");
+  a.href = url;
+  a.download = type === "xlsx" ? "table.xlsx" : "table.csv";
+  a.click();
+}
+</script>
 
 </div>
+
 <!--end::SMS Logs Table Card-->
 
 <!--end::Table-->
