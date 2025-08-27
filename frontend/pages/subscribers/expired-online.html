@@ -385,71 +385,38 @@
                <!--begin::Table-->
 
   <!--begin::SMS Logs Table Card-->
-<div class="card">
-    <div class="card-body">  <!-- Added p-0 to remove padding -->
-        <div class="table-responsive" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
-            <table class="table align-middle table-row-dashed fs-6 gy-5" id="policyTable" style="min-width: 100%; width: auto;">
-                <thead>
-                    <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                        <th class="min-w-50px">ID</th>
-                        <th class="min-w-100px">Actions</th>
-                        <th class="min-w-150px">Profile</th>
-                        <th class="min-w-120px">Expiration</th>
-                        <th class="min-w-100px">NAS</th>
-                        <th class="min-w-80px">Port</th>
-                        <th class="min-w-100px">Type</th>
-                        <th class="min-w-150px">Profile</th>
-                        <th class="min-w-120px">Mac</th>
-                        <th class="min-w-120px">IPv4</th>
-                        <th class="min-w-150px">IPv6</th>
-                        <th class="min-w-120px">Start</th>
-                        <th class="min-w-120px">Update</th>
-                        <th class="min-w-100px">Uptime</th>
-                        <th class="min-w-100px">Upload</th>
-                        <th class="min-w-100px">Download</th>
-                        <th class="min-w-100px">Total</th>
-                    </tr>
-                </thead>
-                <tbody class="fw-semibold text-gray-600">
-                    <td colspan="17" class="text-center py-0">  <!-- colspan matches number of columns -->
-                <div class="d-flex flex-column align-items-center">
-                    <span class="fs-5 text-gray-600">No data available in the table</span>
+<div class="card-body pt-0">
+                <div class="table-responsive">
+                    <table class="table align-middle table-row-dashed fs-6 gy-4 w-100" id="subscriberTable">
+                        <thead>
+                            <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+                                <th class="min-w-50px">ID</th>
+                                <th class="min-w-50px">Actions</th>
+                                <th class="min-w-150px">Profile</th>
+                                <th class="min-w-150px">Profile_Status</th>
+                                <th class="min-w-150px">Expiration</th>
+                                <th class="min-w-150px">Password</th>
+                                <th class="min-w-150px">Packages</th>
+                                <th class="min-w-150px">Salesperson</th>
+                                <th class="min-w-120px">Balance</th>
+                                <th class="min-w-120px">Due</th>
+                                <th class="min-w-150px">NAS</th>
+                                <th class="min-w-150px">Identity</th>
+                                <th class="min-w-150px">Phone</th>
+                                <th class="min-w-150px">Email</th>
+                                <th class="min-w-150px">Country</th>
+                                <th class="min-w-150px">City</th>
+                                <th class="min-w-200px">Address</th>
+                                <th class="min-w-150px">Department</th>
+                                <th class="min-w-150px">Created At</th>
+                            </tr>
+                        </thead>
+                        <tbody id="subscriberBody" class="text-gray-600 fw-semibold">
+                            <!-- Dynamic subscriber rows will be inserted here -->
+                        </tbody>
+                    </table>
                 </div>
-                    <!-- Example row -->
-                    <!--<tr>
-                        <td>1</td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="btn btn-light-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                    Actions
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Edit</a></li>
-                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                </ul>
-                            </div>
-                        </td>
-                        <td><a href="#" class="text-primary fw-bold">wnett_50mbps_ul</a></td>
-                        <td>2023-12-31</td>
-                        <td>NAS-01</td>
-                        <td>8080</td>
-                        <td>Standard</td>
-                        <td>Premium</td>
-                        <td>00:1A:2B:3C:4D:5E</td>
-                        <td>192.168.1.1</td>
-                        <td>2001:0db8:85a3::8a2e:0370:7334</td>
-                        <td>2023-01-01</td>
-                        <td>2023-06-15</td>
-                        <td>180 days</td>
-                        <td>50 GB</td>
-                        <td>120 GB</td>
-                        <td>170 GB</td>
-                    </tr>-->
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+            </div>
 <!--end::Card-->
 
 </div>
@@ -504,7 +471,299 @@
                                             <script src="assets/js/custom/utilities/modals/users-search.js"></script>
                                         <!--end::Custom Javascript-->
                                 <!--end::Javascript-->
-                        
+                        <script>
+function exportTable(type) {
+  let table = document.querySelector("#smsTable"); // target your table
+  let rows = Array.from(table.querySelectorAll("tr"))
+                  .map(tr => Array.from(tr.querySelectorAll("th,td"))
+                  .map(td => td.innerText).join(","))
+                  .join("\n");
+
+  let blob = new Blob([rows], { type: "text/csv" });
+  let url = URL.createObjectURL(blob);
+  let a = document.createElement("a");
+  a.href = url;
+  a.download = type === "xlsx" ? "table.xlsx" : "table.csv";
+  a.click();
+}
+
+// Fetch subscribers data from backend
+fetch('http://localhost:3000/api/subscribers')
+  .then(res => res.json())
+  .then(data => {
+    const subscriberBody = document.getElementById('subscriberBody');
+    subscriberBody.innerHTML = '';
+    
+    data.forEach(subscriber => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td class="text-gray-800">${subscriber.id}</td>
+        <td class="text-gray-800">${subscriber.actions || 'N/A'}</td>
+        <td>${subscriber.profile || 'N/A'}</td>
+        <td class="text-gray-800">${subscriber.profile_status|| 'N/A'}</td>
+        <td class="text-gray-800">
+            <span class="badge ${getExpirationBadgeClass(subscriber.expiration)}">
+                ${formatDate(subscriber.expiration) || 'No Expiration'}
+                </span>
+                </td>
+
+        <td class="text-gray-800">${subscriber.password || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.packages || 'No Package'}</td>
+        <td class="text-gray-800">${subscriber.salesperson || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.balance || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.due || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.NAS || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.identity || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.phone || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.email || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.country || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.city || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.address || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.department || 'Unassigned'}</td>
+        <td class="text-gray-800">${subscriber.created_at || 'Unassigned'}</td>
+        
+        
+        
+      `;
+      subscriberBody.appendChild(row);
+    });
+  })
+  .catch(err => {
+    console.error('Error fetching subscribers:', err);
+    const subscriberBody = document.getElementById('subscriberBody');
+    subscriberBody.innerHTML = `
+      <tr>
+        <td colspan="7" class="text-center text-danger">
+          <div class="d-flex flex-column align-items-center py-5">
+            <i class="fas fa-exclamation-triangle fs-2x mb-3"></i>
+            <span>Error loading subscribers data</span>
+          </div>
+        </td>
+      </tr>
+    `;
+  });
+
+// Helper function to format date
+function formatDate(dateString) {
+  if (!dateString) return null;
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+}
+
+// Helper function to get badge class based on expiration
+function getExpirationBadgeClass(expirationDate) {
+  if (!expirationDate) return 'badge-secondary';
+  
+  const today = new Date();
+  const expiry = new Date(expirationDate);
+  const diffTime = expiry.getTime() - today.getTime();
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  
+  if (diffDays < 0) {
+    return 'badge-danger'; // Expired
+  } else if (diffDays <= 7) {
+    return 'badge-warning'; // Expiring soon
+  } else if (diffDays <= 30) {
+    return 'badge-info'; // Expiring this month
+  } else {
+    return 'badge-success'; // Valid
+  }
+}
+
+// Optional: Add loading state
+function showLoadingState() {
+  const subscriberBody = document.getElementById('subscriberBody');
+  subscriberBody.innerHTML = `
+    <tr>
+      <td colspan="7" class="text-center">
+        <div class="d-flex flex-column align-items-center py-5">
+          <div class="spinner-border text-primary mb-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <span class="text-muted">Loading subscribers...</span>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+// Call this function when page loads or when you want to refresh data
+function loadSubscribers() {
+  showLoadingState();
+  
+  fetch('http://localhost:3000/api/subscribers')
+    .then(res => {
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      return res.json();
+    })
+    .then(data => {
+      const subscriberBody = document.getElementById('subscriberBody');
+      subscriberBody.innerHTML = '';
+      
+      if (data.length === 0) {
+        subscriberBody.innerHTML = `
+          <tr>
+            <td colspan="7" class="text-center text-muted py-5">
+              <div class="d-flex flex-column align-items-center">
+                <i class="fas fa-users fs-2x mb-3 text-muted"></i>
+                <span>No subscribers found</span>
+              </div>
+            </td>
+          </tr>
+        `;
+        return;
+      }
+      
+      data.forEach(subscriber => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td class="text-gray-800">${subscriber.id}</td>
+          <td>
+            <div class="symbol symbol-45px">
+              <img src="${subscriber.profile || '/assets/media/avatars/default-avatar.jpg'}" 
+                   alt="${subscriber.identity || 'Subscriber'}" 
+                   class="rounded-circle" 
+                   onerror="this.src='/assets/media/avatars/default-avatar.jpg'">
+            </div>
+          </td>
+          <td class="text-gray-800">${subscriber.identity || 'N/A'}</td>
+          <td class="text-gray-800">@${subscriber.actions || 'N/A'}</td>
+          <td class="text-gray-800">
+            <span class="badge ${getExpirationBadgeClass(subscriber.expiration)}">
+              ${formatDate(subscriber.expiration) || 'No Expiration'}
+            </span>
+          </td>
+          <td class="text-gray-800">${subscriber.packages || 'No Package'}</td>
+          <td class="text-gray-800">${subscriber.salesperson || 'Unassigned'}</td>
+          
+        `;
+        subscriberBody.appendChild(row);
+      });
+    })
+    .catch(err => {
+      console.error('Error fetching subscribers:', err);
+      const subscriberBody = document.getElementById('subscriberBody');
+      subscriberBody.innerHTML = `
+        <tr>
+          <td colspan="7" class="text-center text-danger">
+            <div class="d-flex flex-column align-items-center py-5">
+              <i class="fas fa-exclamation-triangle fs-2x mb-3"></i>
+              <span>Error loading subscribers data</span>
+              <button class="btn btn-sm btn-primary mt-2" onclick="loadSubscribers()">
+                Try Again
+              </button>
+            </div>
+          </td>
+        </tr>
+      `;
+    });
+}
+
+// Load subscribers when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+  loadSubscribers();
+});
+
+
+
+</script>
+
+<script>
+document.getElementById("subscriberForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const data = {
+    profile: document.getElementById('profile').value,
+    profile_status: document.getElementById('profile_status').value,
+    expiration: document.getElementById('expiration').value,
+    password: document.getElementById('password').value,
+    packages: document.getElementById('packages').value,
+    salesperson: document.getElementById('salesperson').value,
+    balance: parseFloat(document.getElementById('balance').value) || 0,
+    due: parseFloat(document.getElementById('due').value) || 0,
+    NAS: document.getElementById('NAS').value,
+    identity: document.getElementById('identity').value,
+    phone: document.getElementById('phone').value,
+    email: document.getElementById('email').value,
+    country: document.getElementById('country').value,
+    city: document.getElementById('city').value,
+    address: document.getElementById('address').value,
+    department: document.getElementById('department').value
+    created_at: document.getElementById('created_at').value
+  };
+
+  try {
+    const response = await fetch("http://localhost:3000/api/subscribers", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if (!response.ok) throw new Error(await response.text());
+
+    const result = await response.json();
+    console.log("✅ Subscriber created:", result);
+
+    // Close modal
+    const modalEl = document.getElementById('kt_modal_add_subscriber');
+    const modalInstance = bootstrap.Modal.getInstance(modalEl);
+    modalInstance.hide();
+
+    alert("Subscriber created successfully!");
+
+    // Reload subscribers table
+    loadSubscribers();
+
+  } catch (err) {
+    console.error("❌ Error creating subscriber:", err);
+    alert("Failed to create subscriber");
+  }
+});
+
+async function loadSubscribers() {
+  try {
+    const res = await fetch("http://localhost:3000/api/subscribers");
+    if (!res.ok) throw new Error("Failed to fetch subscribers");
+
+    const subscribers = await res.json();
+    const tbody = document.getElementById("subscriberBody"); // your table body ID
+    tbody.innerHTML = "";
+
+    subscribers.forEach(sub => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${sub.id}</td>
+        <td>${sub.profile}</td>
+        <td>${sub.profile_status}</td>
+        <td>${sub.expiration}</td>
+        <td>${sub.password}</td>
+        <td>${sub.packages}</td>
+        <td>${sub.salesperson}</td>
+        <td>${sub.balance}</td>
+        <td>${sub.due}</td>
+        <td>${sub.NAS}</td>
+        <td>${sub.identity}</td>
+        <td>${sub.phone}</td>
+        <td>${sub.email}</td>
+        <td>${sub.country}</td>
+        <td>${sub.city}</td>
+        <td>${sub.address}</td>
+        <td>${sub.department}</td>
+        <td>${sub.created_at}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  } catch (err) {
+    console.error("❌ Error loading subscribers:", err);
+  }
+}
+</script>
 
                     </body>
                     <!--end::Body-->
